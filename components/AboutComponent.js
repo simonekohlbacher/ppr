@@ -5,7 +5,7 @@ import KWM_Component from "../core/kwm-component.js";
 export default class AboutComponent extends KWM_Component {
   constructor() {
     super();
-    this.text = "We are the best 🔥 study course in the world! Juhuu";
+    this.text = "We are the best 🔥 study course in the world! Juhuuu";
   }
 
   template() {
