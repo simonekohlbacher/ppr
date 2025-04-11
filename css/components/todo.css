@@ -1,0 +1,12 @@
+
+#todo_app ul {
+    padding-left: 0;
+}
+
+#todo_app li {
+    list-style: none;
+}
+
+.done {
+    text-decoration: line-through;
+}
