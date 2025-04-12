@@ -12,7 +12,7 @@ export default class HomeComponent extends KWM_Component {
     super();
 
     // Any component data goes here in the constructor
-    this.text = "Welcome Welcome HOME my friend 🥳";
+    this.text = "Welcome to the STAGING site for BZL 🥳";
 
     this.heroList = [
       {
