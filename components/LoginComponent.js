@@ -14,26 +14,6 @@ export default class LoginComponent extends KWM_Component {
     // Any component data goes here in the constructor
     this.text = "Login";
 
-    this.heroList = [
-      {
-        heading: "Our Products",
-        text: "From Laptops to Perfumes we got it all!",
-        link: "#/shop",
-        img: "https://source.unsplash.com/random/1920x1080?shop,online,store",
-      },
-      {
-        heading: "AI Chat",
-        text: "Chat with yur personal AI assistant",
-        link: "#/chat",
-        img: "https://source.unsplash.com/random/1920x1080?ai,bot,robot",
-      },
-      {
-        heading: "Todo App",
-        text: "Manage your personal Todos",
-        link: "#/todo",
-        img: "https://source.unsplash.com/random/1920x1080?workspace,notebook",
-      },
-    ];
   }
 
   // Template function = shape of the component
@@ -41,32 +21,7 @@ export default class LoginComponent extends KWM_Component {
     return /*html*/ `
         <section id="main_content">
             <h1>🏠 ${this.text}</h1>
-            <p>
-               Whohoo! Component Rendering works! And our navigation with Routes and our Router works too!
-            </p>
-            <p><a href="#/contact">Contact us!</a></p>
-            <p><a href="#/i-dont-exist">I lead to a non existent page</a></p>
             
-            <!-- Child Components -->
-            <hero-teaser-component></hero-teaser-component>
-            <hero-teaser-component 
-                background-image="https://source.unsplash.com/random/1920x1080?toast,coffee"
-                text="I am a custom value for the Hero-Text"
-                heading="Wanna have it?">
-            </hero-teaser-component>
-
-            ${this.heroList
-              .map(
-                (item) => /*html*/ `
-                <hero-teaser-component 
-                    text="${item.text}" 
-                    heading="${item.heading}" 
-                    background-image="${item.img}"
-                    link="${item.link}">
-                </hero-teaser-component>
-                `,
-              )
-              .join("")}
         </section>
         `;
   }

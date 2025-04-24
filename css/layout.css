@@ -1,23 +1,22 @@
 /* Main Layout & Colors 🎨 - Adjust Colors to your liking*/
 
-:root {
-  --kwmjs-accent: #8147a7;
-  --kwmjs-white: #f8f8f8;
-  --kwmjs-black: #1c1c1c;
-  --kwmjs-blue: #4757a7;
-}
 
-#kwmJS {
-  padding: 20px 50px;
+:root {
+  --primary-yellow: #F8EC19;
+  --primary-light-grey: #868A8E;
+  --primary-dark-grey: #E8E8E8;
+  --bzl-black: #2F2F2F;
+  --bzl-white: white;
 }
 
 body {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
-  color: var(--kwmjs-black);
-  background-color: var(--kwmjs-white);
+  color: var(--bzl-black);
+  background-color: var(--bzl-white);
 }
+
 
 button {
   cursor: pointer;
@@ -28,9 +27,7 @@ header ul {
   margin: 0;
   display: flex;
   height: 80px;
-  background-color: var(--kwmjs-accent);
-  list-style-type: none;
-  padding-right: 70px;
+
 }
 
 header ul li {
@@ -42,7 +39,6 @@ header ul li {
 header ul li a {
   height: 80px;
   text-decoration: none;
-  color: var(--kwmjs-white);
   padding: 0 20px;
   display: block;
 }
@@ -52,25 +48,23 @@ header ul li .active {
 }
 
 header ul li:hover {
-  background-color: var(--kwmjs-white);
+  background-color: var(--bzl-white);
 }
 
 header ul li:hover a {
   text-decoration: none;
-  color: var(--kwmjs-black);
+  color: var(--bzl-black);
 }
 
 /* Footer */
 
 footer {
   height: 80px;
-  background-color: var(--kwmjs-blue);
   position: absolute;
   bottom: 0;
   width: 100%;
   text-align: center;
   line-height: 80px;
-  color: var(--kwmjs-white);
 }
 
 footer p {

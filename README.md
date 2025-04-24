@@ -1,7 +1,4 @@
-# Welcome to LESSON 2
-
-You can find the instructions for the lesson here:
-https://jkoster.notion.site/Modern-Web-Apps-4ed40df5dab64edcb95e666155e10abc
+# Welcome to BZL new Website
 
 ## Local Development-Server
 ```shell
@@ -61,4 +58,8 @@ npx vite
 # Minifying, compiling and bundling our application for deployment on live system
 # Builds project per default from "." folder to "dist" folder, uses "index.html" as entry point
 npx vite build
+````
+Icons
+````
+https://fontawesome.com/
 ````
