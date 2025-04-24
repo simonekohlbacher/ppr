@@ -11,11 +11,23 @@
   <link rel="manifest" href="/site.webmanifest" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="stylesheet" type="text/css" href="/app.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @layer base {
+      :root {
+        --bzl-yellow: #F8EC19;
+        --bzl-light-grey: #868A8E;
+        --bzl-dark-grey: #E8E8E8;
+        --bzl-black: #2F2F2F;
+        --bzl-white: white;
+      }
+    }
+  </style>
   <title>kwmJS v1.0.0</title>
 </head>
 <body>
 <header>
+
   <nav id="kwmJS-navigation">
     <ul>
       <li><a href="#/">Home</a></li>

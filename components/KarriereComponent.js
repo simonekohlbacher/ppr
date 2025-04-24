@@ -12,7 +12,7 @@ export default class KarriereComponent extends KWM_Component {
   template() {
     return /*html*/ `
         <section id="main_content">
-            <h1>Karriereee</h1>
+            <h1 class="bg-[var(--primary-yellow)]">Karriereee</h1>
             <p>${this.text}</p>
             <address>
                 <a href="https://jakobosterberger.com/">Website</a>

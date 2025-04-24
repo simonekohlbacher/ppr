@@ -9,9 +9,9 @@ export default class HeroTeaserComponent extends KWM_Component {
 
   template() {
     return /*html*/ `
-            <section class="hero-teaser" style="background-image: url(${this.getAttribute("background-image") ?? "https://source.unsplash.com/random/1920x1080"})">
+            <section class="hero-teaser" class="color--primary-yellow">
                 <div class="content">
-                    <h1>${this.getAttribute("heading") ?? "Hero Teaser Heading"}</h1>
+                    <h1 class="color--primary-yellow">Hero</h1>
                     <p>${this.getAttribute("text") ?? "Hero Teaser Text - I am very reusable"}</p>
                     <p><a class="cta" href="${this.getAttribute("link") ?? "#/"}">${this.getAttribute("btn-text") ?? "Explore"}</a></p>
                 </div>
