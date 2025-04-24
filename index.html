@@ -1,16 +1,14 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="utf-8" />
-  <meta lang="en" />
+  <meta lang="de" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta
-          name="viewport"
-          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"
-  />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"/>
   <link rel="manifest" href="/site.webmanifest" />
-  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="/img/logo.jpg" />
   <link rel="stylesheet" type="text/css" href="/app.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <style type="text/tailwindcss">
     @layer base {
@@ -23,26 +21,29 @@
       }
     }
   </style>
-  <title>kwmJS v1.0.0</title>
+  <title>BZL</title>
 </head>
-<body>
-<header>
+<body >
 
-  <nav id="kwmJS-navigation">
-    <ul>
-      <li><a href="#/">Home</a></li>
-      <li><a href="#/leistungen">Leistungen</a></li>
-      <li><a href="#/kursangebote">Kursangebote</a></li>
-      <li><a href="#/ueberuns">Über uns</a></li>
-      <li><a href="#/karriere">Karriere</a></li>
-      <li><a href="#/kontakt">Kontakt</a></li>
-      <li><a href="#/login">Login</a></li>
-      <li>Suche</li>
-      <li>Sprachauswahl</li>
+<header>
+  <nav id="nav" class="m-12" >
+      <ul class="flex justify-between">
+       <li><a href="#/"><img class="w-40" src="img/logo.jpg" alt="Logo"></a></li>
+      <div class="bg-[rgba(47,47,47,0.7)] flex flex-row gap-12 rounded-full border-3 border-white text-white items-center px-12 drop-shadow-xl">
+        <li><a href="#/leistungen">Leistungen <i class="fa-solid fa-chevron-down"></i></a></li>
+        <li><a href="#/kursangebote">Kursangebote <i class="fa-solid fa-chevron-down"></i></a></li>
+        <li><a href="#/ueberuns">Über uns <i class="fa-solid fa-chevron-down"></i></a></li>
+        <li><a href="#/karriere">Karriere <i class="fa-solid fa-chevron-down"></i></a></li>
+        <li><a href="#/kontakt">Kontakt</a></li>
+        <li class="font-bold bg-[var(--bzl-yellow)] rounded-full px-4 py-2 text-[var(--bzl-black)]"><a href="#/login">Login</a></li>
+        <li><i class="fa-solid fa-magnifying-glass text-2xl"></i></li>
+        <li>DE | EN</li>
+      </div>
     </ul>
   </nav>
 </header>
-<main id="kwmJS">
+
+<main id="main">
   <!-- this is the container element in which our SPA will be rendered -->
   <div>If components rendering works I will be gone...</div>
 
