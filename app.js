@@ -4,7 +4,7 @@ import NotFoundComponent from "./components/NotFoundComponent.js";
 import KarriereComponent from "./components/KarriereComponent.js";
 import LeistungsComponent from "./components/LeistungsComponent.js";
 import KursangeboteComponent from "./components/KursangeboteComponent.js";
-import HeroTeaserComponent from "./components/HeroTeaserComponent.js";
+import HeroTeaserComponent from "./components/designComponents/HeroTeaserComponent.js";
 import UeberUnsComponent from "./components/UeberUnsComponent.js";
 import KontaktComponent from "./components/KontaktComponent.js";
 import LoginComponent from "./components/LoginComponent.js";

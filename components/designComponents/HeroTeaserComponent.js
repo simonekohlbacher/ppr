@@ -1,6 +1,6 @@
 "use strict";
 
-import KWM_Component from "../core/kwm-component.js";
+import KWM_Component from "../../core/kwm-component.js";
 
 export default class HeroTeaserComponent extends KWM_Component {
   constructor() {
