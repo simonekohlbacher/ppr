@@ -10,7 +10,7 @@ import { quizModelInstance } from '../models/QuizModel.js';
  * This component is responsible for rendering the quiz page.
  * It fetches the questions from the API using a model and renders them.
  */
-export default class QuizComponent extends KWM_Component {
+export default class KontaktComponent extends KWM_Component {
 
     constructor() {
         super();
@@ -164,4 +164,4 @@ export default class QuizComponent extends KWM_Component {
     }
 }
 
-customElements.define('quiz-component', QuizComponent);
+customElements.define('kontakt-component', KontaktComponent);

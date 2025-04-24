@@ -4,28 +4,11 @@ import KWM_Observable from '../core/kwm-observable.js';
 
 import { aiChatModelInstance } from '../models/AiChatModel.js';
 
-// --- Example for messages from OpenAI ---
-// [
-//     {
-//         "role": "user",
-//         "content": "Hello"
-//     },
-//     {
-//         "role": "assistant",
-//         "content": "Hello! How can I assist you today?"
-//     }
-// ]
 
-/**
- * AiChat Component
- *
- * This component is responsible for rendering the chat page. It fetches the messages from the API using a model and renders them.
- */
-export default class AiChatComponent extends KWM_Component {
+export default class KursangeboteComponent extends KWM_Component {
 
     constructor() {
         super();
-
         this.messages = aiChatModelInstance.messages;
         this.openAiApiKey = aiChatModelInstance.openAiApiKey;
         this.newMessage = new KWM_Observable('');
@@ -88,7 +71,7 @@ export default class AiChatComponent extends KWM_Component {
     template() {
         return /*html*/`
         <section id="main_content">
-            <h1>KWM Ai Chat</h1>
+            <h1>Kursangebote</h1>
 
             ${this.openAiApiKey.value === '' ? /* Api KEY is not set */`
                     <p>
@@ -127,4 +110,4 @@ export default class AiChatComponent extends KWM_Component {
     }
 }
 
-customElements.define('ai-chat-component', AiChatComponent);
+customElements.define('kursangebote-component', KursangeboteComponent);

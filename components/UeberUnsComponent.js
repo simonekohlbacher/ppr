@@ -3,7 +3,7 @@ import KWM_Component from '../core/kwm-component.js';
 import KWM_Observable from '../core/kwm-observable.js';
 import { todoModelInstance } from '../models/TodoModel.js';
 
-export default class TodoComponent extends KWM_Component {
+export default class UeberUnsComponent extends KWM_Component {
     constructor() {
         super();
 
@@ -50,4 +50,4 @@ export default class TodoComponent extends KWM_Component {
     }
 }
 
-customElements.define('todo-component', TodoComponent);
+customElements.define('ueberuns-component', UeberUnsComponent);

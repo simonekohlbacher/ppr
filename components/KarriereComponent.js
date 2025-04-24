@@ -2,7 +2,7 @@
 
 import KWM_Component from "../core/kwm-component.js";
 
-export default class ContactComponent extends KWM_Component {
+export default class KarriereComponent extends KWM_Component {
   constructor() {
     super();
     this.text =
@@ -12,7 +12,7 @@ export default class ContactComponent extends KWM_Component {
   template() {
     return /*html*/ `
         <section id="main_content">
-            <h1>📨 Contact</h1>
+            <h1>Karriereee</h1>
             <p>${this.text}</p>
             <address>
                 <a href="https://jakobosterberger.com/">Website</a>
@@ -25,4 +25,4 @@ export default class ContactComponent extends KWM_Component {
   }
 }
 
-customElements.define("contact-component", ContactComponent);
+customElements.define("karriere-component", KarriereComponent);

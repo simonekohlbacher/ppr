@@ -1,12 +1,14 @@
 "use strict";
 import HomeComponent from "./components/HomeComponent.js";
 import NotFoundComponent from "./components/NotFoundComponent.js";
-import ContactComponent from "./components/ContactComponent.js";
-import AboutComponent from "./components/AboutComponent.js";
+import KarriereComponent from "./components/KarriereComponent.js";
+import LeistungsComponent from "./components/LeistungsComponent.js";
+import KursangeboteComponent from "./components/KursangeboteComponent.js";
 import HeroTeaserComponent from "./components/HeroTeaserComponent.js";
-import TodoComponent from "./components/TodoComponent.js";
-import QuizComponent from "./components/QuizComponent.js";
-import AiChatComponent from "./components/AiChatComponent.js";
+import UeberUnsComponent from "./components/UeberUnsComponent.js";
+import KontaktComponent from "./components/KontaktComponent.js";
+import LoginComponent from "./components/LoginComponent.js";
+
 
 import KWM_Route from "./core/kwm-route.js";
 import KWM_Router from "./core/kwm-router.js";
@@ -20,34 +22,34 @@ const myRouter = new KWM_Router({
       component: new HomeComponent(),
     }),
     new KWM_Route({
-      slug: "/about",
-      name: "About",
-      component: new AboutComponent(),
+      slug: "/leistungen",
+      name: "Leistungen",
+      component: new LeistungsComponent(),
     }),
     new KWM_Route({
-      slug: "/todo",
-      name: "Todo",
-      component: new TodoComponent(),
+      slug: '/kursangebote',
+      name: 'Kursangebote',
+      component: new KursangeboteComponent(),
     }),
     new KWM_Route({
-      slug: "/contact",
-      name: "Contact",
-      component: new ContactComponent(),
-      // (Bonus) make sure if the user is allowed to see the component - when not - redirect to 404
-      canRender: () =>
-          confirm("🛡️ Security check: Everything ok?")
-              ? true
-              : KWM_Router.redirect("/404"),
+      slug: "/ueberuns",
+      name: "Über Uns",
+      component: new UeberUnsComponent(),
     }),
     new KWM_Route({
-      slug: '/quiz',
-      name: 'Quiz 🧠',
-      component: new QuizComponent()
+      slug: "/karriere",
+      name: "Karriere",
+      component: new KarriereComponent(),
     }),
     new KWM_Route({
-      slug: '/chat',
-      name: 'AI Chat 🤖',
-      component: new AiChatComponent()
+      slug: '/kontakt',
+      name: 'Kontakt',
+      component: new KontaktComponent()
+    }),
+    new KWM_Route({
+      slug: '/login',
+      name: 'Login',
+      component: new LoginComponent()
     }),
     new KWM_Route({
       slug: "/404",
@@ -60,5 +62,3 @@ const myRouter = new KWM_Router({
 });
 
 myRouter.init();
-
-// Navigating to the home page should display the Hero-Teaser similar like in the example picture
