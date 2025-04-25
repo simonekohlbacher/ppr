@@ -17,44 +17,10 @@ body {
   background-color: var(--bzl-white);
 }
 
-
 button {
   cursor: pointer;
 }
 
-/* Nav */
-header ul {
-  margin: 0;
-  display: flex;
-  height: 80px;
-
-}
-
-header ul li {
-  height: 80px;
-  line-height: 80px;
-  cursor: pointer;
-}
-
-header ul li a {
-  height: 80px;
-  text-decoration: none;
-  padding: 0 20px;
-  display: block;
-}
-
-header ul li .active {
-  text-decoration: underline;
-}
-
-header ul li:hover {
-  background-color: var(--bzl-white);
-}
-
-header ul li:hover a {
-  text-decoration: none;
-  color: var(--bzl-black);
-}
 
 /* Footer */
 
