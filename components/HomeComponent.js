@@ -1,6 +1,7 @@
 "use strict";
 
 import KWM_Component from "../core/kwm-component.js";
+import KarrierechancenComponent from "./designComponents/KarrierechancenComponent";
 
 /**
  * This is the page home component and will be rendered when the user navigates to the '/' home route.
@@ -13,6 +14,7 @@ export default class HomeComponent extends KWM_Component {
 
     // Any component data goes here in the constructor
     this.text = "Welcome to the STAGING site for BZL 🥳";
+    new KarrierechancenComponent();
 
   }
 
@@ -21,11 +23,10 @@ export default class HomeComponent extends KWM_Component {
     return /*html*/ `
         <section id="main_content">
             <h1>🏠 ${this.text}</h1>
-            <p>
-               Whohoo! Component Rendering works! And our navigation with Routes and our Router works too!
-            </p>
             <p><a href="#/contact">Contact us!</a></p>
             <p><a href="#/i-dont-exist">I lead to a non existent page</a></p>
+            <br>
+            <karrierechancen-component/>
         
         
         </section>
