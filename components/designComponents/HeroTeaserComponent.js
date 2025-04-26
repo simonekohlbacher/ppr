@@ -14,9 +14,9 @@ export default class HeroTeaserComponent extends KWM_Component {
     const isHomePage = window.location.pathname === "/" && window.location.hash === "#/";
 
     return /*html*/ `
-            <section class="w-full h-screen bg-cover" style="background-image: url('${this.getAttribute("bg-image") ?? "../../img/headerImages/HomeHeaderBild.jpg"}');">
+            <section class="relative w-full h-screen min-h-[750px] bg-cover" style="background-image: url('${this.getAttribute("bg-image") ?? "../../img/headerImages/HomeHeaderBild.jpg"}');">
                 
-                <div class="header-content pt-70 px-[125px] md:px-[141px] absolute inset-0 bg-gradient-to-r from-white via-white/30 to-white/0"">
+                <div class="header-content h-full pt-60 px-[125px] md:px-[141px] absolute inset-0 bg-gradient-to-r from-white via-white/40 to-white/0">
                 
                     <div class="header-text max-w-[655px]">
                         <h1>${this.getAttribute("headline") ?? this.headline}</h1>
@@ -26,7 +26,7 @@ export default class HeroTeaserComponent extends KWM_Component {
                    
                 
                     ${isHomePage ? `
-                    <div class="flex justify-between items-end w-full mt-30">
+                    <div class="flex justify-between items-end w-full mt-20 mb-4">
                       <!-- OFFER LINKS als Buttons -->
                       <div class="hidden md:flex flex-col gap-4">
                           <a href="#" class="bg-[#F8EC19] text-black text-center py-2 px-6 rounded-full font-semibold hover:bg-[#868A8E] hover:text-white transition">
