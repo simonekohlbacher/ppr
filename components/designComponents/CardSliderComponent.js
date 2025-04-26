@@ -8,11 +8,12 @@ export default class CardSliderComponent extends KWM_Component {
         super();
         this.courseCards = [];
         this.currentIndex = 0;
+        this.cardWidth = 0; // Speichert die Breite einer einzelnen Karte
     }
 
     template() {
         return /*html*/ `
-        <section class="p-0"> 
+        <section> 
           <div class="relative overflow-hidden w-full max-w-md mx-auto">       
             <div class="flex transition-transform duration-500">
               ${this.courseCards
@@ -48,10 +49,25 @@ export default class CardSliderComponent extends KWM_Component {
         this.courseCards = JSON.parse(courseCards) || [];
         this.render();
         this.setupNavigation();
+        this.initializeSlider();
+        window.addEventListener("resize", () => this.initializeSlider());
     }
 
     render() {
         this.innerHTML = this.template();
+    }
+
+    initializeSlider() {
+        const container = this.querySelector("div.flex");
+        if (!container || !container.firstElementChild) return;
+
+        // Berechne die Breite einer einzelnen Karte inkl. Padding
+        this.cardWidth = container.firstElementChild.offsetWidth;
+
+        // Setze die Breite des Containers auf die Breite einer Karte
+        container.style.width = `${this.cardWidth}px`;
+
+        this.updateSlider();
     }
 
     setupNavigation() {
@@ -75,7 +91,8 @@ export default class CardSliderComponent extends KWM_Component {
     }
     updateSlider() {
         const container = this.querySelector("div.flex");
-        container.style.transform = `translateX(-${this.currentIndex * 100}%)`;
+        if (!container) return;
+        container.style.transform = `translateX(-${this.currentIndex * this.cardWidth}px)`;
     }
 }
 
