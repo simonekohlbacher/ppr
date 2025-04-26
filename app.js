@@ -7,6 +7,9 @@ import KursangeboteComponent from "./components/KursangeboteComponent.js";
 import UeberUnsComponent from "./components/UeberUnsComponent.js";
 import KontaktComponent from "./components/KontaktComponent.js";
 import LoginComponent from "./components/LoginComponent.js";
+import ImpressumComponent from "./components/ImpressumComponent.js";
+import DatenschutzComponent from "./components/DatenschutzComponent.js";
+import AGBComponent from "./components/AGBComponent.js";
 
 import KWM_Route from "./core/kwm-route.js";
 import KWM_Router from "./core/kwm-router.js";
@@ -49,6 +52,23 @@ const myRouter = new KWM_Router({
       name: 'Login',
       component: new LoginComponent()
     }),
+
+    new KWM_Route({
+      slug: "/impressum",
+      name: "Impressum",
+      component: new ImpressumComponent()
+    }),
+    new KWM_Route({
+      slug: "/datenschutz",
+      name: "Datenschutz",
+      component: new DatenschutzComponent()
+    }),
+    new KWM_Route({
+      slug: "/agb",
+      name: "AGB",
+      component: new AGBComponent()
+    }),
+
     new KWM_Route({
       slug: "/404",
       name: "Not Found",
