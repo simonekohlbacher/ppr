@@ -24,7 +24,7 @@
     }
   </style>
 </head>
-<body >
+<body class="min-h-screen flex flex-col">
 
 <header>
   <nav id="nav" class="m-8 md:m-12 flex flex-row items-center justify-between">
@@ -53,26 +53,79 @@
   </nav>
 
 </header>
-<main id="main" class="md:w-9/10 m-auto w-11/12">
+<main id="main" class="md:w-9/10 m-auto w-11/12 flew-grow">
   <!-- this is the container element in which our SPA will be rendered -->
   <div>If components rendering works I will be gone...</div>
-
 </main>
 
-<footer>
-  <div class="footer">
-    <div class="footerContainer">
-      <div class="footerContainerLogo">
-        <img src="/assets/logo.png" alt="Logo" />
+<footer id="footer" class="bg-[var(--bzl-black)] text-white w-full flex flex-col px-6 py-8">
+  <div class="flex flex-wrap justify-between w-full max-w-screen-xl mx-auto mb-4 gap-8">
+    <div class="firma max-w-xs">
+      <h2 class="text-xl font-bold mb-2">BZL - Bildungszentrum<br>Lenzing GmbH</h2>
+      <div class="flex items-center gap-4 mb-2">
+        <i class="fa-solid fa-location-dot text-[var(--bzl-yellow)]"></i>
+        <a href="https://maps.app.goo.gl/bqSy6ndoKz3GsE6w9" target="_blank" rel="noopener noreferrer" class="hover:underline">
+          Im Grüntal 2<br>A - 4860 Lenzing
+        </a>
       </div>
-      <div class="footerContainerLinks">
-        <a href="#/impressum">Impressum</a>
-        <a href="#/datenschutz">Datenschutz</a>
-        <a href="#/agb">AGB</a>
+
+      <div class="flex items-center gap-4 mb-2">
+        <i class="fa-solid fa-phone text-[var(--bzl-yellow)]"></i>
+        <a href="tel:+4376727013531" class="hover:underline">+43 7672 701-3531</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <i class="fa-solid fa-envelope text-[var(--bzl-yellow)]"></i>
+        <a href="mailto:office@bzl.at" class="hover:underline">office@bzl.at</a>
       </div>
     </div>
+
+    <div class="rechtliches">
+      <h2 class="text-xl font-bold mb-2">Rechtliches</h2>
+      <ul class="space-y-1">
+        <li><a href="#/impressum" class="hover:underline font-bold">Impressum</a></li>
+        <li><a href="#/datenschutz" class="hover:underline font-bold">Datenschutz</a></li>
+        <li><a href="#/agb" class="hover:underline font-bold">AGB</a></li>
+      </ul>
+    </div>
+
+    <div class="socialmedia">
+      <h2 class="text-xl font-bold mb-2">Social Media</h2>
+      <div class="flex flex-col gap-4 text-2xl">
+        <div class="flex gap-8">
+          <a href="https://at.linkedin.com/company/bildungszentrum-lenzing" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="hover:text-[var(--bzl-yellow)]">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://www.facebook.com/BZLGmbH/?locale=de_DE" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="hover:text-[var(--bzl-yellow)]">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </div>
+        <div class="flex gap-8">
+          <a href="https://www.instagram.com/bildungszentrum_lenzing/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="hover:text-[var(--bzl-yellow)]">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.tiktok.com/@bildungszentrum_lenzing?_t=ZN-8vqhIzWcdPy&_r=1" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="hover:text-[var(--bzl-yellow)]">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="login">
+      <h2 class="text-xl font-bold mb-2">Login</h2>
+      <a href="#/login" class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[var(--bzl-yellow)] text-[var(--bzl-black)] text-xl hover:bg-white">
+        <i class="fa-solid fa-lock"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="w-full max-w-screen-xl mx-auto flex justify-end gap-4 mt-8 sm:mt-2">
+    <img src="/img/certificate-ebq.png" alt="EBQ Zertifikat" class="h-8" />
+    <img src="/img/certificate-ineo.png" alt="INEO Zertifikat" class="h-8" />
+    <img src="/img/certificate-öcert.png" alt="ÖCERT Zertifikat" class="h-8" />
   </div>
 </footer>
+
 <script type="module" src="/app.js"></script>
 
 </body>

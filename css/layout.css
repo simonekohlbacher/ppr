@@ -21,18 +21,3 @@ button {
   cursor: pointer;
 }
 
-
-/* Footer */
-
-footer {
-  height: 80px;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  line-height: 80px;
-}
-
-footer p {
-  margin: 0;
-}
