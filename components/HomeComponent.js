@@ -2,6 +2,7 @@
 
 import KWM_Component from "../core/kwm-component.js";
 import CardSliderComponent from "./designComponents/CardSliderComponent";
+import ButtonComponent from "./designComponents/ButtonComponent.js";
 
 export default class HomeComponent extends KWM_Component {
   constructor() {
@@ -49,8 +50,9 @@ export default class HomeComponent extends KWM_Component {
             <card-slider-component courseCards="${courseCardsJson}"></card-slider-component>
             <card-slider-component courseCards="${courseCardsJson}"></card-slider-component>
         </div>   
+        <button-component text="Weitere Kurse entdecken"></button-component>
             
-           
+          
         </section>
         `;
   }
