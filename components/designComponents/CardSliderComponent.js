@@ -8,27 +8,28 @@ export default class CardSliderComponent extends KWM_Component {
         super();
         this.courseCards = [];
         this.currentIndex = 0;
+        this.cardWidth = 0; // Speichert die Breite einer einzelnen Karte
     }
 
     template() {
         return /*html*/ `
-        <section class="p-0"> 
+        <section> 
           <div class="relative overflow-hidden w-full max-w-md mx-auto">       
             <div class="flex transition-transform duration-500">
               ${this.courseCards
             .map(
                 card => /*html*/ `
-                      <div class="flex-shrink-0 w-full">
-                          <course-card-component
-                              img="${card.img}"
-                              imgAlt="${card.imgAlt}"
-                              heading="${card.heading}"
-                              date="${card.date}"
-                              time="${card.time}"
-                              place="${card.place}">
-                          </course-card-component>
-                      </div>
-                  `
+                      <div class="flex-shrink-0 w-full"> 
+                        <course-card-component
+                            img="${card.img}"
+                            imgAlt="${card.imgAlt}"
+                            heading="${card.heading}"
+                            date="${card.date}"
+                            time="${card.time}"
+                            place="${card.place}">
+                        </course-card-component>
+                      </div>      
+                    `
             )
             .join("")}
             </div>
@@ -48,16 +49,31 @@ export default class CardSliderComponent extends KWM_Component {
         this.courseCards = JSON.parse(courseCards) || [];
         this.render();
         this.setupNavigation();
+        this.initializeSlider();
+        window.addEventListener("resize", () => this.initializeSlider());
     }
 
     render() {
         this.innerHTML = this.template();
     }
 
+    initializeSlider() {
+        const container = this.querySelector("div.flex");
+        if (!container || !container.firstElementChild) return;
+
+        // Berechne die Breite einer einzelnen Karte inkl. Padding
+        this.cardWidth = container.firstElementChild.offsetWidth;
+
+        // Setze die Breite des Containers auf die Breite einer Karte
+        container.style.width = `${this.cardWidth}px`;
+
+        this.updateSlider();
+    }
+
     setupNavigation() {
         this.querySelector("#prevBtn").addEventListener("click", () => {
             if (this.currentIndex === 0) {
-                this.currentIndex = this.courseCards.length - 1; // Springe ans Ende
+                this.currentIndex = this.courseCards.length - 1;
             } else {
                 this.currentIndex--;
             }
@@ -66,16 +82,19 @@ export default class CardSliderComponent extends KWM_Component {
 
         this.querySelector("#nextBtn").addEventListener("click", () => {
             if (this.currentIndex === this.courseCards.length - 1) {
-                this.currentIndex = 0; // Springe zum Anfang
+                this.currentIndex = 0;
             } else {
                 this.currentIndex++;
             }
             this.updateSlider();
         });
     }
+
     updateSlider() {
         const container = this.querySelector("div.flex");
-        container.style.transform = `translateX(-${this.currentIndex * 100}%)`;
+        if (!container) return;
+
+        container.style.transform = `translateX(-${this.currentIndex * this.cardWidth}px)`;
     }
 }
 
