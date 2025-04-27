@@ -3,6 +3,8 @@
 import KWM_Component from "../core/kwm-component.js";
 import CardSliderComponent from "./designComponents/CardSliderComponent";
 import ButtonComponent from "./designComponents/ButtonComponent.js";
+import TestimonialComponent from "./designComponents/TestimonialComponent.js";
+import HeroTeaserComponent from "./designComponents/HeroTeaserComponent.js";
 
 export default class HomeComponent extends KWM_Component {
   constructor() {

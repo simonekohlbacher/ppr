@@ -2,7 +2,7 @@
 
 import KWM_Component from "../../core/kwm-component.js";
 
-export default class CourseCardComponent extends KWM_Component {
+export default class TestimonialComponent extends KWM_Component {
     constructor() {
         super();
     }
@@ -13,7 +13,10 @@ export default class CourseCardComponent extends KWM_Component {
               <div class="realtive flex items-center">
                 <!-- Logo & Foto -->
                 <div>
+                    <div class="bg-[#F8EC19] w-80 h-80 rounded-full">
+                        <div></div>   
                    
+                    </div>
                 </div>
                 
                 <!-- Text -->
@@ -27,4 +30,4 @@ export default class CourseCardComponent extends KWM_Component {
     }
 }
 
-customElements.define("course-card-component", CourseCardComponent);
+customElements.define("testimonial-component", TestimonialComponent);
