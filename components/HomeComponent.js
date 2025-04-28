@@ -59,7 +59,7 @@ export default class HomeComponent extends KWM_Component {
         </div>   
         <button-component text="Weitere Kurse entdecken"></button-component>
             
-          <karrierechancen-component/>
+          <!-- <karrierechancen-component/> -->
           <testimonial-component/>
           
         </section>
