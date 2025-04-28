@@ -36,7 +36,6 @@ export default class HomeComponent extends KWM_Component {
         place: "Haus der Industrie Wien"
       }
     ];
-    new KarrierechancenComponent();
 
   }
 
@@ -58,8 +57,11 @@ export default class HomeComponent extends KWM_Component {
             <card-slider-component courseCards="${courseCardsJson}"></card-slider-component>
         </div>   
         <button-component text="Weitere Kurse entdecken"></button-component>
-            
-          <karrierechancen-component/>
+         
+<!--        <karrierechancen-component> <karrierechancen-component/>-->
+       
+        <referenzen-component></referenzen-component>
+
         </section>
         `;
   }

@@ -10,6 +10,8 @@ import LoginComponent from "./components/LoginComponent.js";
 import ImpressumComponent from "./components/ImpressumComponent.js";
 import DatenschutzComponent from "./components/DatenschutzComponent.js";
 import AGBComponent from "./components/AGBComponent.js";
+import KarrierechancenComponent from "./components/designComponents/KarrierechancenComponent.js";
+import ReferenzenComponent from "./components/designComponents/ReferenzenComponent.js";
 import HeroTeaserComponent from "./components/designComponents/HeroTeaserComponent.js";
 
 import KWM_Route from "./core/kwm-route.js";
