@@ -38,6 +38,9 @@ p {
 }
 
 .contentDiv{
-  width: calc(100% - 300px);
+  width: calc(100% - 18rem);
   margin: auto;
+  @media (width < 48rem) {
+    width: calc(100% - 6rem);
+  }
 }
