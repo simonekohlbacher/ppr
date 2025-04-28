@@ -11,8 +11,12 @@ export default class LeistungsComponent extends KWM_Component {
   template() {
     return /*html*/ `
         <section id="main_content">
-            <h1>Leistungen</h1>
-            <p>${this.text} <a href="#/contact">Contact us</a></p>
+            <hero-teaser-component
+                headline="Leistungen entdecken";
+                sub-headline="und direkt in Anspruch nehmen!"
+                text="Wir vom BZL sind spezialisiert auf Führungskräfte-, Team- und Persönlichkeitsentwicklung. In Form von Seminaren, Workshops oder individuellen Lerndesigns unterstützen wir Sie dabei die Kompetenzen Ihrer Mitarbeiter/innen zu stärken."
+                bg-image="../../img/headerImages/LeistungHeaderBild.jpg"
+            ></hero-teaser-component>
         </section>
         `;
   }

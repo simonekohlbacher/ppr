@@ -20,7 +20,12 @@ export default class LoginComponent extends KWM_Component {
   template() {
     return /*html*/ `
         <section id="main_content">
-            <h1>🏠 ${this.text}</h1>
+            <hero-teaser-component
+                headline="Einloggen";
+                sub-headline="und Kurse entdecken!"
+                text="Erstellen Sie jetzt Ihr Konto oder melden Sie sich an, um auf alle verfügbaren Weiterbildungsangebote zugreifen zu können."
+                bg-image="../../img/headerImages/LoginHeaderBild.jpg"
+            ></hero-teaser-component>
             
         </section>
         `;

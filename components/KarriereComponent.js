@@ -12,14 +12,12 @@ export default class KarriereComponent extends KWM_Component {
   template() {
     return /*html*/ `
         <section id="main_content">
-            <h1 class="bg-[var(--primary-yellow)]">Karriereee</h1>
-            <p>${this.text}</p>
-            <address>
-                <a href="https://jakobosterberger.com/">Website</a>
-                <a href="https://github.com/jk-oster">GitHub</a>
-                <a href="https://www.linkedin.com/in/jakob.osterberger/">LinkedIn</a>
-                <a href="https://www.instagram.com/jakobosterberger/">Instagram</a>
-            </address>
+            <hero-teaser-component
+                headline="Deine Karriere";
+                sub-headline="beim Bildungszentrum Lenzing!"
+                text="Wir sind eines der führenden Ausbildungszentren in Österreich, spezialisiert auf Facharbeiter/innen- und Lehrlingsausbildung sowie Personal- und Organisationsentwicklung."
+                bg-image="../../img/headerImages/KarriereHeaderBild.png"
+            ></hero-teaser-component>
         </section>
         `;
   }
