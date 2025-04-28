@@ -1,6 +1,7 @@
 "use strict";
 
 import KWM_Component from "../core/kwm-component.js";
+import KarrierechancenComponent from "./designComponents/KarrierechancenComponent";
 import CardSliderComponent from "./designComponents/CardSliderComponent";
 import ButtonComponent from "./designComponents/ButtonComponent.js";
 import TestimonialComponent from "./designComponents/TestimonialComponent.js";
@@ -58,8 +59,10 @@ export default class HomeComponent extends KWM_Component {
             <card-slider-component courseCards="${courseCardsJson}"></card-slider-component>
         </div>   
         <button-component text="Weitere Kurse entdecken"></button-component>
+            <karrierechancen-component/>
             
             <testimonial-component></testimonial-component>
+          
           
         </section>
         `;

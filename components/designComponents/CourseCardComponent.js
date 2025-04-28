@@ -10,10 +10,10 @@ export default class CourseCardComponent extends KWM_Component {
     template() {
         return /*html*/ `
           <section class="card m-12">
-          <div class="realtive flex items-center">
-            <div class="rounded-4xl bg-[var(--bzl-dark-grey)] overflow-hidden flex flex-col h-[350px] w-[300px] md:h-[600px] md:w-[400px]">
-              <div class="w-full overflow-hidden">
-                <img class="w-full h-full object-cover md:block hidden" src="${this.getAttribute('img')}" alt="${this.getAttribute('imgAlt')}" />
+          <div class="relative flex items-center">
+            <div class="rounded-4xl bg-[var(--bzl-dark-grey)] overflow-hidden flex flex-col h-[500px] w-[400px]"> 
+              <div class="w-full h-48 overflow-hidden">
+                <img class="w-full h-full object-cover" src="${this.getAttribute('img')}" alt="${this.getAttribute('imgAlt')}" />
               </div>
               <div class="flex flex-col justify-between flex-grow p-5"> 
                 <div>
