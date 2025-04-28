@@ -15,7 +15,7 @@ export default class KarrierechancenComponent extends KWM_Component {
     // Template function = shape of the component
     template() {
         return `
-        <section id="main_content">
+        <section id="karrierechancen" class="contentDiv">
             <h1 class="left">Ihre Karrierechancen</h1>
             <p>Wir bieten eine breite Palette an Kursen und Programmen, die Sie gezielt auf die Herausforderungen 
             des Arbeitsmarktes vorbereiten. Unsere Weiterbildungsangebote umfassen:</p>
