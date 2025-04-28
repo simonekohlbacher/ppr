@@ -9,7 +9,7 @@ export default class TestimonialComponent extends KWM_Component {
 
     template() {
         return /*html*/ `
-          <section class="testimonial">
+          <section class="testimonial contentDiv">
               <div class="realtive flex items-center">
                 <!-- Logo & Foto -->
                 <div>
@@ -20,8 +20,8 @@ export default class TestimonialComponent extends KWM_Component {
                 </div>
                 
                 <!-- Text -->
-                <div class="bg-[var(--bzl-light-grey)]">
-                   
+                <div class="rounded-edge bg-[var(--bzl-light-grey)]">
+                   helloas
                 </div>
                 
               </div>
