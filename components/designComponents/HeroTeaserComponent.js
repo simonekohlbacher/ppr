@@ -45,16 +45,16 @@ export default class HeroTeaserComponent extends KWM_Component {
                       
                       <!-- SOCIAL MEDIA ICONS -->
                       <div class="hidden md:flex gap-4 items-end">
-                          <a href="https://www.linkedin.com/company/bildungszentrum-lenzing/" target="_blank" class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#F8EC19] text-black text-xl hover:bg-white transition">
+                          <a href="https://www.linkedin.com/company/bildungszentrum-lenzing/" target="_blank" class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[var(--bzl-yellow)] text-black text-xl hover:bg-white transition">
                               <i class="fa-brands fa-linkedin-in"></i>
                           </a>
-                          <a href="https://www.tiktok.com/@bzl.tiktok" target="_blank" class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#F8EC19] text-black text-xl hover:bg-white transition">
+                          <a href="https://www.tiktok.com/@bzl.tiktok" target="_blank" class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[var(--bzl-yellow)] text-black text-xl hover:bg-white transition">
                               <i class="fa-brands fa-tiktok"></i>
                           </a>
-                          <a href="https://www.instagram.com/bildungszentrum_lenzing/" target="_blank" class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#F8EC19] text-black text-xl hover:bg-white transition">
+                          <a href="https://www.instagram.com/bildungszentrum_lenzing/" target="_blank" class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[var(--bzl-yellow)] text-black text-xl hover:bg-white transition">
                               <i class="fa-brands fa-instagram"></i>
                           </a>
-                          <a href="https://www.facebook.com/BZLGmbH/" target="_blank" class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#F8EC19] text-black text-xl hover:bg-white transition">
+                          <a href="https://www.facebook.com/BZLGmbH/" target="_blank" class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[var(--bzl-yellow)] text-black text-xl hover:bg-white transition">
                               <i class="fa-brands fa-facebook-f"></i>
                           </a>  
                       </div>                  
