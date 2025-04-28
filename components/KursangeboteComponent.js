@@ -12,8 +12,13 @@ constructor() {
 
     template() {
         return /*html*/`
-        <section id="main_content">
-            <h1>Kursangebote</h1>
+        <section id="main_content">            
+            <hero-teaser-component
+                headline="Kurse entdecken";
+                sub-headline="und direkt buchen!"
+                text="Das BZL - Bildungszentrum Lenzing ist ein öffentliches Bildungsinstitut, das von Firmen und Privatpersonen seit mehr als 20 Jahren intensiv genutzt wird."
+                bg-image="../../img/headerImages/KurseHeaderBild.jpg"
+            ></hero-teaser-component>
             
             <div class="flex flex-row gap-32 justify-center">  
             <course-card-component

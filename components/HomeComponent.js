@@ -44,7 +44,12 @@ export default class HomeComponent extends KWM_Component {
 
     return /*html*/ `
         <section id="main_content">
-            <h1>🏠 ${this.text}</h1>
+            <hero-teaser-component
+                headline="Einloggen";
+                sub-headline="und Kurse entdecken!"
+                text="Erstellen Sie jetzt Ihr Konto oder melden Sie sich an, um auf alle verfügbaren Weiterbildungsangebote zugreifen zu können"
+                bg-image="../../img/headerImages/HomeHeaderBild.jpg"
+            ></hero-teaser-component>
        
         <div class="flex gap-32 justify-center">  
             <card-slider-component courseCards="${courseCardsJson}"></card-slider-component>
