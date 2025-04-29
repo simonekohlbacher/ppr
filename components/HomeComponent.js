@@ -36,7 +36,6 @@ export default class HomeComponent extends KWM_Component {
         place: "Haus der Industrie Wien"
       }
     ];
-    new KarrierechancenComponent();
 
   }
 
@@ -53,7 +52,7 @@ export default class HomeComponent extends KWM_Component {
                 bg-image="../../img/headerImages/HomeHeaderBild.jpg"
             ></hero-teaser-component>
        
-        <div class="flex gap-32 justify-center">  
+        <div class="flex flex-wrap md:gap-32 justify-center">
             <card-slider-component courseCards="${courseCardsJson}"></card-slider-component>
             <card-slider-component courseCards="${courseCardsJson}"></card-slider-component>
         </div>   
