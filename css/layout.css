@@ -36,3 +36,11 @@ h3 {
 p {
   font-size: 20px;
 }
+
+.contentDiv{
+  width: calc(100% - 18rem);
+  margin: auto;
+  @media (width < 48rem) {
+    width: calc(100% - 6rem);
+  }
+}

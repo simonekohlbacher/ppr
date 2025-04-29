@@ -1,6 +1,7 @@
 "use strict";
 
 import KWM_Component from "../core/kwm-component.js";
+import KarrierechancenComponent from "./designComponents/KarrierechancenComponent";
 import CardSliderComponent from "./designComponents/CardSliderComponent";
 import ButtonComponent from "./designComponents/ButtonComponent.js";
 
@@ -35,6 +36,7 @@ export default class HomeComponent extends KWM_Component {
         place: "Haus der Industrie Wien"
       }
     ];
+    new KarrierechancenComponent();
 
   }
 
@@ -57,7 +59,7 @@ export default class HomeComponent extends KWM_Component {
         </div>   
         <button-component text="Weitere Kurse entdecken"></button-component>
             
-          
+          <karrierechancen-component/>
         </section>
         `;
   }
