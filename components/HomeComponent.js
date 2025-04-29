@@ -19,7 +19,7 @@ export default class HomeComponent extends KWM_Component {
       },
       {
         img: "img/Seminar.jpg",
-        imgAlt: "Workshop",
+        imgAlt: "Seminar",
         heading: "Ausbildung der Ausbilder:innen (AdA) Lehrlingsausbilder:in-Basislehrgang",
         date: "5. Mai 2025",
         time: "10:00 - 16:00 Uhr",
@@ -27,7 +27,7 @@ export default class HomeComponent extends KWM_Component {
       },
       {
         img: "img/Seminar.jpg",
-        imgAlt: "Event",
+        imgAlt: "Seminar",
         heading: "Ausbildung der Ausbilder:innen (AdA) Lehrlingsausbilder:in-Basislehrgang",
         date: "20. Juni 2025",
         time: "18:00 - 22:00 Uhr",

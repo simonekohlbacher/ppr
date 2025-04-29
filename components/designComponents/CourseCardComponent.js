@@ -11,7 +11,7 @@ export default class CourseCardComponent extends KWM_Component {
         return /*html*/ `
           <section class="card m-12">
           <div class="realtive flex items-center">
-            <div class="rounded-4xl bg-[var(--bzl-dark-grey)] overflow-hidden flex flex-col h-[350px] w-[300px] md:h-[600px] md:w-[400px]">
+            <div class="rounded-4xl bg-[var(--bzl-dark-grey)] overflow-hidden flex flex-col h-[320px] w-[300px] md:h-[500px] md:w-[400px]">
               <div class="w-full overflow-hidden">
                 <img class="w-full h-full object-cover md:block hidden" src="${this.getAttribute('img')}" alt="${this.getAttribute('imgAlt')}" />
               </div>
