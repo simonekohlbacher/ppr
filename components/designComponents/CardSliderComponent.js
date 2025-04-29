@@ -33,10 +33,10 @@ export default class CardSliderComponent extends KWM_Component {
             )
             .join("")}
             </div>
-            <button id="prevBtn" class="absolute top-1/2 left-0 -translate-y-1/2 bg-[var(--bzl-yellow)] rounded-full px-3 py-2 text-sm z-10">
+            <button id="prevBtn" class="absolute top-1/2 left-12 md:left-0 -translate-y-1/2 bg-[var(--bzl-yellow)] rounded-full px-3 py-2 text-sm z-10">
                 <i class="fa-solid fa-chevron-left"></i>
             </button>
-            <button id="nextBtn" class="absolute top-1/2 right-0 -translate-y-1/2 bg-[var(--bzl-yellow)] rounded-full px-3 py-2 text-sm z-10">
+            <button id="nextBtn" class="absolute top-1/2 right-12 md:right-0 -translate-y-1/2 bg-[var(--bzl-yellow)] rounded-full px-3 py-2 text-sm z-10">
                 <i class="fa-solid fa-chevron-right"></i>
             </button>
           </div>
