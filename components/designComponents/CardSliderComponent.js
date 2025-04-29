@@ -14,7 +14,7 @@ export default class CardSliderComponent extends KWM_Component {
     template() {
         return /*html*/ `
         <section> 
-          <div class="relative overflow-hidden w-full max-w-md mx-auto">       
+          <div class="relative overflow-hidden w-full max-w-xl mx-auto">       
             <div class="flex transition-transform duration-500">
               ${this.courseCards
             .map(
@@ -33,10 +33,10 @@ export default class CardSliderComponent extends KWM_Component {
             )
             .join("")}
             </div>
-            <button id="prevBtn" class="absolute left-0 top-1/2 -translate-y-1/2 bg-[var(--bzl-yellow)] rounded-full px-3 py-2 text-sm z-10">
+            <button id="prevBtn" class="absolute top-1/2 -translate-y-1/2 bg-[var(--bzl-yellow)] rounded-full px-3 py-2 text-sm z-10">
                 <i class="fa-solid fa-chevron-left"></i>
             </button>
-            <button id="nextBtn" class="absolute right-0 top-1/2 -translate-y-1/2 bg-[var(--bzl-yellow)] rounded-full px-3 py-2 text-sm z-10">
+            <button id="nextBtn" class="absolute right-2 md:right-20 top-1/2 -translate-y-1/2 bg-[var(--bzl-yellow)] rounded-full px-3 py-2 text-sm z-10">
                 <i class="fa-solid fa-chevron-right"></i>
             </button>
           </div>
