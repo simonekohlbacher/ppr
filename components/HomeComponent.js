@@ -45,7 +45,7 @@ export default class HomeComponent extends KWM_Component {
         <section id="main_content">
             <h1>🏠 ${this.text}</h1>
        
-        <div class="flex flex-wrap md:gap-52 justify-center">
+        <div class="flex flex-wrap md:gap-32 justify-center">
             <card-slider-component courseCards="${courseCardsJson}"></card-slider-component>
             <card-slider-component courseCards="${courseCardsJson}"></card-slider-component>
         </div>   
