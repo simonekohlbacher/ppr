@@ -4,6 +4,8 @@ import KWM_Component from "../core/kwm-component.js";
 import KarrierechancenComponent from "./designComponents/KarrierechancenComponent";
 import CardSliderComponent from "./designComponents/CardSliderComponent";
 import ButtonComponent from "./designComponents/ButtonComponent.js";
+import CardComponent from "./designComponents/CardComponent.js";
+import CtaComponent from "./designComponents/CTAComponent.js";
 
 export default class HomeComponent extends KWM_Component {
   constructor() {
@@ -49,16 +51,34 @@ export default class HomeComponent extends KWM_Component {
                 headline="Einloggen";
                 sub-headline="und Kurse entdecken!"
                 text="Erstellen Sie jetzt Ihr Konto oder melden Sie sich an, um auf alle verfügbaren Weiterbildungsangebote zugreifen zu können"
-                bg-image="../../img/headerImages/HomeHeaderBild.jpg"
-            ></hero-teaser-component>
-       
-        <div class="flex flex-wrap md:gap-32 justify-center">
-            <card-slider-component courseCards="${courseCardsJson}"></card-slider-component>
-            <card-slider-component courseCards="${courseCardsJson}"></card-slider-component>
-        </div>   
-        <button-component text="Weitere Kurse entdecken"></button-component>
+                bg-image="../../img/headerImages/HomeHeaderBild.jpg">
+            </hero-teaser-component>
             
-          <karrierechancen-component/>
+            <div class="flex md:flex-row gap-72 justify-center pt-52">
+              <div class="basis-2/3 pl-52">
+                <cta-component 
+                  heading="Bildungszentrum Lenzing"
+                  text="Ob Ausbildung, Impulsseminar, Fachkurs, Lehrlingsausbildung oder maßgeschneiderte Personal- und Organisationsentwicklung - wir begleiten Menschen und Unternehmen in ganz Österreich auf ihrem Weg zu nachhaltigem Erfolg. Mit Know-How aus der Praxis, Handschlagqualität und einem Fokus die Menschen und ihre individuellen Bedürfnisse."
+                  buttonText="Leistungen entdecken">
+                </cta-component>
+              </div>
+              <div class="basis-1/3">
+                <card-component 
+                  img="../../img/kursprogramm.png"
+                  imgAlt="Kursprogramm"
+                  heading="Kursprogramm 2024/25">
+                </card-component>
+              </div>
+            </div>
+   
+            <div class="flex flex-wrap md:gap-32 gap-22 justify-center">
+                <card-slider-component courseCards="${courseCardsJson}"></card-slider-component>
+                <card-slider-component courseCards="${courseCardsJson}"></card-slider-component>
+            </div>   
+            <button-component text="Weitere Kurse entdecken"></button-component>
+            
+            <karrierechancen-component/>
+         
         </section>
         `;
   }
