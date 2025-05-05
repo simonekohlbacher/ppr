@@ -27,7 +27,7 @@ export default class TestimonialComponent extends KWM_Component {
                 
                     <!-- Kreis + Bild + Logo -->
                     <div class="flex flex-row justify-between items-center w-full md:flex-col md:items-start md:basis-1/3 space-y-0 md:space-y-6 relative z-10 pt-10 pl-[18rem] sm:pl-[6rem]" >
-                        <div class="relative w-60 h-60 md:w-80 md:h-80 bg-[var(--primary-yellow)] rounded-full flex items-center justify-center overflow-hidden shadow-lg">
+                        <div class="relative aspect-square w-32 sm:w-48 md:w-60 lg:w-80 bg-[var(--primary-yellow)] rounded-full flex items-center justify-center overflow-hidden shadow-lg shrink-0">
                             <img src="../../img/Bernhard-Lintner.png" alt="Portrait Bernhard Lintner" class="w-24 md:w-32 object-cover">
                         </div>
                         <div class="flex justify-end md:justify-start w-full pr-[18rem] sm:pr-[6rem]">
@@ -36,7 +36,7 @@ export default class TestimonialComponent extends KWM_Component {
                     </div>
     
                     <!-- Zitatfeld -->
-                    <div class="relative md:basis-2/3 flex items-center w-full mt-[-4rem] md:mt-0 pr-[18rem] sm:pr-[6rem] pl-[18rem] sm:pl-[6rem] bg-[#E8E8E8] md:bg-transparent">
+                    <div class="relative md:basis-2/3 flex items-center w-full mt-[-4rem] md:mt-0 pr-[18rem] sm:pr-[6rem] pl-[18rem] sm:pl-[6rem] bg-[#E8E8E8] md:bg-transparent pt-6 pb-4">
                         <div class="relative flex flex-col justify-center text-center md:text-left z-0">
                            
                             <!-- Zitat-Text -->
