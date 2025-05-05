@@ -4,6 +4,7 @@ import KWM_Component from "../core/kwm-component.js";
 import KarrierechancenComponent from "./designComponents/KarrierechancenComponent";
 import CardSliderComponent from "./designComponents/CardSliderComponent";
 import ButtonComponent from "./designComponents/ButtonComponent.js";
+import LinkedInComponent from "./designComponents/LinkedInComponent";
 
 export default class HomeComponent extends KWM_Component {
   constructor() {
@@ -58,7 +59,15 @@ export default class HomeComponent extends KWM_Component {
         </div>   
         <button-component text="Weitere Kurse entdecken"></button-component>
             
-          <karrierechancen-component/>
+<!--          <karrierechancen-component/>-->
+        <linkedin-component></linkedin-component>
+        <button-component 
+          text="Zu LinkedIn" 
+          href="https://www.linkedin.com/company/bildungszentrum-lenzing/" 
+          target="_blank">
+        </button-component>
+
+
         </section>
         `;
   }

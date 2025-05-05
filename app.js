@@ -11,6 +11,7 @@ import ImpressumComponent from "./components/ImpressumComponent.js";
 import DatenschutzComponent from "./components/DatenschutzComponent.js";
 import AGBComponent from "./components/AGBComponent.js";
 import HeroTeaserComponent from "./components/designComponents/HeroTeaserComponent.js";
+import LinkedInComponent from "./components/designComponents/LinkedInComponent";
 
 import KWM_Route from "./core/kwm-route.js";
 import KWM_Router from "./core/kwm-router.js";
