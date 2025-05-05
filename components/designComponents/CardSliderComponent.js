@@ -7,39 +7,50 @@ export default class CardSliderComponent extends KWM_Component {
     constructor() {
         super();
         this.courseCards = [];
-        this.currentIndex = 0;
-        this.cardWidth = 0; // Speichert die Breite einer einzelnen Karte
     }
 
     template() {
         return /*html*/ `
         <section> 
-          <div class="relative overflow-hidden w-full">       
-            <div class="flex transition-transform duration-500">
-              ${this.courseCards
-            .map(
-                card => /*html*/ `
-                      <div class="flex-shrink-0 w-full">
-                          <course-card-component
-                              img="${card.img}"
-                              imgAlt="${card.imgAlt}"
-                              heading="${card.heading}"
-                              date="${card.date}"
-                              time="${card.time}"
-                              place="${card.place}">
-                          </course-card-component>
-                      </div>
-                  `
-            )
-            .join("")}
+          
+
+<div id="default-carousel" class="relative" data-carousel="slide">
+    <!-- Carousel wrapper -->
+       <div class="relative h-120 md:h-152 w-102 md:w-132 overflow-hidden">
+          ${this.courseCards
+            .map((card, index) => /*html*/ `
+                <div class="${index === 0 ? "block" : "hidden"} duration-700 ease-in-out" data-carousel-item>
+                  <div class="flex justify-center items-center h-full">
+                    <course-card-component
+                      img="${card.img}"
+                      imgAlt="${card.imgAlt}"
+                      heading="${card.heading}"
+                      date="${card.date}"
+                      time="${card.time}"
+                      place="${card.place}">
+                    </course-card-component>
+                  </div>
+                </div>
+              `).join("")}
+              
+                <!-- Slider controls -->
+                <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer" data-carousel-prev>
+                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[var(--bzl-yellow)]">
+                        <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                        </svg>
+                        <span class="sr-only">Previous</span>
+                    </span>
+                </button>
+                <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer" data-carousel-next>
+                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[var(--bzl-yellow)]">
+                        <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                        </svg>
+                        <span class="sr-only">Next</span>
+                    </span>
+                </button>
             </div>
-            <button id="prevBtn" class="absolute top-1/2 left-12 md:left-0 -translate-y-1/2 bg-[var(--bzl-yellow)] rounded-full px-3 py-2 text-sm z-10">
-                <i class="fa-solid fa-chevron-left"></i>
-            </button>
-            <button id="nextBtn" class="absolute top-1/2 right-12 md:right-0 -translate-y-1/2 bg-[var(--bzl-yellow)] rounded-full px-3 py-2 text-sm z-10">
-                <i class="fa-solid fa-chevron-right"></i>
-            </button>
-          </div>
         </section>
         `;
     }
@@ -48,52 +59,13 @@ export default class CardSliderComponent extends KWM_Component {
         const courseCards = this.getAttribute("courseCards");
         this.courseCards = JSON.parse(courseCards) || [];
         this.render();
-        this.setupNavigation();
-        this.initializeSlider();
-        window.addEventListener("resize", () => this.initializeSlider());
     }
 
     render() {
         this.innerHTML = this.template();
     }
 
-    initializeSlider() {
-        const container = this.querySelector("div.flex");
-        if (!container || !container.firstElementChild) return;
 
-        // Berechne die Breite einer einzelnen Karte inkl. Padding
-        this.cardWidth = container.firstElementChild.offsetWidth;
-
-        // Setze die Breite des Containers auf die Breite einer Karte
-        container.style.width = `${this.cardWidth}px`;
-
-        this.updateSlider();
-    }
-
-    setupNavigation() {
-        this.querySelector("#prevBtn").addEventListener("click", () => {
-            if (this.currentIndex === 0) {
-                this.currentIndex = this.courseCards.length - 1; // Springe ans Ende
-            } else {
-                this.currentIndex--;
-            }
-            this.updateSlider();
-        });
-
-        this.querySelector("#nextBtn").addEventListener("click", () => {
-            if (this.currentIndex === this.courseCards.length - 1) {
-                this.currentIndex = 0; // Springe zum Anfang
-            } else {
-                this.currentIndex++;
-            }
-            this.updateSlider();
-        });
-    }
-    updateSlider() {
-        const container = this.querySelector("div.flex");
-        if (!container) return;
-        container.style.transform = `translateX(-${this.currentIndex * this.cardWidth}px)`;
-    }
 }
 
 customElements.define("card-slider-component", CardSliderComponent);
