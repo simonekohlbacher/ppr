@@ -54,6 +54,7 @@ export default class HomeComponent extends KWM_Component {
                 bg-image="../../img/headerImages/HomeHeaderBild.jpg"
             ></hero-teaser-component>
        
+        <div class="mainContent my-40">
             <div class="flex flex-col md:flex-row justify-between w-full">
               <div>
                 <heading-component headline="Aktuelle Kurse" subHeadline="Personalentwicklung"></heading-component>
@@ -80,9 +81,7 @@ export default class HomeComponent extends KWM_Component {
           href="https://www.linkedin.com/company/bildungszentrum-lenzing/" 
           target="_blank">
         </button-component>
-
-
-        <karrierechancen-component/>   
+</div>
         </section>
         `;
   }
