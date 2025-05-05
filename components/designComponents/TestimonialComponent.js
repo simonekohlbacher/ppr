@@ -9,7 +9,7 @@ export default class TestimonialComponent extends KWM_Component {
 
     template() {
         return /*html*/ `
-          <section class="testimonial pl-[18rem] sm:pl-[6rem] py-10 relative overflow-hidden mt-20 mb-20">
+          <section class="testimonial py-10 relative overflow-hidden mt-20 mb-20">
                 
             <!-- Hintergrundbild grau 
             <img src="../../img/greyBackground.svg" style="width: 80%; height: 100%" alt="Grauer abgerundeter Hintergrund" class="absolute top-0 right-0 w-[50%] md:w-[130%] h-auto z-0 pointer-events-none" />
@@ -23,43 +23,43 @@ export default class TestimonialComponent extends KWM_Component {
             </div>
             
             <div class="relative w-full">
-                <div class="flex flex-col md:flex-row items-center md:items-center justify-between gap-8 relative">
+                <div class="flex flex-col lg:flex-row items-center md:items-center justify-between gap-8 relative">
                 
-                <!-- Kreis + Bild + Logo -->
-                <div class="flex flex-col md:justify-start justify-center items-center md:items-start md:basis-1/3 space-y-6 relative z-10 pt-10">
-                    <div class="relative w-60 h-60 md:w-80 md:h-80 bg-[var(--primary-yellow)] rounded-full flex items-center justify-center overflow-hidden shadow-lg mt:2">
-                        <img src="../../img/Bernhard-Lintner.png" alt="Portrait Bernhard Lintner" class="w-24 md:w-32 object-cover">
-                    </div>
-                    <div class="flex justify-end md:justify-start w-full">
-                        <img src="../../img/lenzing-logo.png" alt="Lenzing Logo" class="lg:w-30 md:w-32">
-                    </div>
-                </div>
-
-                <!-- Zitatfeld -->
-                <div class="relative md:basis-2/3 flex items-center w-full mt-[-4rem] md:mt-0 pr-[18rem] sm:pr-[6rem] bg-[#E8E8E8] md:bg-transparent">
-                    <div class="relative flex flex-col justify-center text-center md:text-left z-0">
-                       
-                        <!-- Zitat-Text -->
-                        <p class="text-sm md:text-[20px] leading-relaxed mb-6 text-center">
-                            
-                            <span class="text-[var(--primary-yellow)] text-5xl md:text-8xl font-bold mb-0 leading-none mb-2">“</span>
-                            Lebenslanges Lernen ist wichtiger denn je, um mit den sich rasch ändernden Umständen gut mithalten zu können. 
-                            Mit dem BZL haben wir einen Partner an der Seite, der ein umfangreiches Weiterbildungsangebot für Jobneulinge 
-                            über Mitarbeitende aller Unternehmensbereiche bis hin zum Top Management bietet. 
-                            Ich schätze dabei besonders die auf unsere Bedürfnisse ausgerichteten, maßgeschneiderten Lösungen.
-                            
-                        </p>
-                        <span class="text-[var(--primary-yellow)] text-5xl md:text-8xl font-bold self-end">”</span>
-                        <!-- Unterschrift -->
-                        <div class="font-bold lg:text-center text-sm md:text-[20px] md:text-left">
-                            Bernhard Lintner, VP Global QESH<br>
-                            Site Director Lenzing, Lenzing AG7
+                    <!-- Kreis + Bild + Logo -->
+                    <div class="flex flex-row justify-between items-center w-full md:flex-col md:items-start md:basis-1/3 space-y-0 md:space-y-6 relative z-10 pt-10 pl-[18rem] sm:pl-[6rem]" >
+                        <div class="relative w-60 h-60 md:w-80 md:h-80 bg-[var(--primary-yellow)] rounded-full flex items-center justify-center overflow-hidden shadow-lg">
+                            <img src="../../img/Bernhard-Lintner.png" alt="Portrait Bernhard Lintner" class="w-24 md:w-32 object-cover">
                         </div>
-                        
+                        <div class="flex justify-end md:justify-start w-full pr-[18rem] sm:pr-[6rem]">
+                            <img src="../../img/lenzing-logo.png" alt="Lenzing Logo" class="lg:w-30 md:w-32">
+                        </div>
                     </div>
-                </div>
-
-              </div>
+    
+                    <!-- Zitatfeld -->
+                    <div class="relative md:basis-2/3 flex items-center w-full mt-[-4rem] md:mt-0 pr-[18rem] sm:pr-[6rem] pl-[18rem] sm:pl-[6rem] bg-[#E8E8E8] md:bg-transparent">
+                        <div class="relative flex flex-col justify-center text-center md:text-left z-0">
+                           
+                            <!-- Zitat-Text -->
+                            <p class="text-sm md:text-[20px] leading-relaxed mb-6 text-center">
+                                
+                                <span class="text-[var(--primary-yellow)] text-5xl md:text-8xl font-bold mb-0 leading-none mb-2">“</span>
+                                Lebenslanges Lernen ist wichtiger denn je, um mit den sich rasch ändernden Umständen gut mithalten zu können. 
+                                Mit dem BZL haben wir einen Partner an der Seite, der ein umfangreiches Weiterbildungsangebot für Jobneulinge 
+                                über Mitarbeitende aller Unternehmensbereiche bis hin zum Top Management bietet. 
+                                Ich schätze dabei besonders die auf unsere Bedürfnisse ausgerichteten, maßgeschneiderten Lösungen.
+                                
+                            </p>
+                            <span class="text-[var(--primary-yellow)] text-5xl md:text-8xl font-bold self-end">”</span>
+                            <!-- Unterschrift -->
+                            <div class="font-bold lg:text-center text-sm md:text-[20px] md:text-left">
+                                Bernhard Lintner, VP Global QESH<br>
+                                Site Director Lenzing, Lenzing AG7
+                            </div>
+                            
+                        </div>
+                    </div>
+    
+                  </div>
             </div>
               
           </section>
