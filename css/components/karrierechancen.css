@@ -1,0 +1,29 @@
+@media (width >= 64rem) {
+    .rec1 {
+        background-image: url("../../img/karrierechancen/1.jpeg");
+        width: 100%;
+        height: 220px;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: 100% auto;
+    }
+
+    .rec2 {
+        background-image: url("../../img/karrierechancen/2.jpeg");
+        width: 100%;
+        height: 220px;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: 100% auto;
+    }
+
+    .rec3 {
+        background-image: url("../../img/karrierechancen/3.jpeg");
+        width: 100%;
+        height: 220px;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: 100% auto;
+    }
+
+}
