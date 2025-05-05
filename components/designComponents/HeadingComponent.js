@@ -11,12 +11,12 @@ export default class HeadingComponent extends KWM_Component {
         return /*html*/ `
        <section>
           <div class="flex flex-col">
-            <h3 class="text-3xl mb-12 px-12 md:px-22 text-left">
+            <h2 class="text-3xl mb-12 px-12 md:px-22 text-left">
               ${this.getAttribute("headline") || ""}
-            </h3>
-            <h4 class="text-2xl font-semibold mb-4 md:px-22 px-12 text-left">
+            </h2>
+            <h3 class="text-2xl font-semibold mb-4 md:px-22 px-12 text-left">
               ${this.getAttribute("subHeadline") || ""}
-            </h4>
+            </h3>
             <div class="flex mb-8 text-left">
               <div class="md:w-152 w-92 h-3 bg-[var(--bzl-yellow)]"></div>
             </div>
