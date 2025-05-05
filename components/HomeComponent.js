@@ -4,6 +4,7 @@ import KWM_Component from "../core/kwm-component.js";
 import KarrierechancenComponent from "./designComponents/KarrierechancenComponent";
 import CardSliderComponent from "./designComponents/CardSliderComponent";
 import ButtonComponent from "./designComponents/ButtonComponent.js";
+import HeadingComponent from "./designComponents/HeadingComponent";
 
 export default class HomeComponent extends KWM_Component {
   constructor() {
@@ -52,13 +53,24 @@ export default class HomeComponent extends KWM_Component {
                 bg-image="../../img/headerImages/HomeHeaderBild.jpg"
             ></hero-teaser-component>
        
-        <div class="flex flex-wrap md:gap-32 justify-center">
-            <card-slider-component courseCards="${courseCardsJson}"></card-slider-component>
-            <card-slider-component courseCards="${courseCardsJson}"></card-slider-component>
-        </div>   
-        <button-component text="Weitere Kurse entdecken"></button-component>
+            <div class="flex flex-col md:flex-row justify-between w-full">
+              <div>
+                <heading-component headline="Aktuelle Kurse" subHeadline="Personalentwicklung"></heading-component>
+                <div class="md:ml-24">
+                  <card-slider-component courseCards="${courseCardsJson}"></card-slider-component>
+                </div>
+              </div>
+              <div class="flex flex-col md:items-end mt-20">
+                <h4 class="text-2xl font-semibold mb-4 md:px-22 px-12 justify-end">Fachausbildung</h4> 
+                <div class="md:w-152 w-92 h-3 bg-[var(--bzl-yellow)]"></div>
+                <div class="md:mr-24 mt-10">
+                  <card-slider-component courseCards="${courseCardsJson}"></card-slider-component>
+                </div>
+              </div>
+            </div>
             
-          <karrierechancen-component/>
+        <button-component text="Weitere Kurse entdecken"></button-component>
+        <karrierechancen-component/>   
         </section>
         `;
   }
