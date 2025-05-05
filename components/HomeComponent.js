@@ -56,7 +56,6 @@ export default class HomeComponent extends KWM_Component {
                 bg-image="../../img/headerImages/HomeHeaderBild.jpg"> 
             </hero-teaser-component>
        
-        <div class="mainContent my-40">
              <div class="flex md:flex-row gap-72 justify-center pt-52">
               <div class="basis-2/3 pl-52">
                 <cta-component 
@@ -89,22 +88,8 @@ export default class HomeComponent extends KWM_Component {
                 </div>
               </div>
             </div>
-            
-        <button-component text="Weitere Kurse entdecken"></button-component>
-            
-        <karrierechancen-component></karrierechancen-component>
-         
-        <linkedin-component></linkedin-component>
-        <button-component 
-          text="Zu LinkedIn" 
-          href="https://www.linkedin.com/company/bildungszentrum-lenzing/" 
-          target="_blank">
-        </button-component>
-        </div>
-        </section>
-              
             <button-component text="Weitere Kurse entdecken"></button-component>
-                
+            
             <karrierechancen-component></karrierechancen-component>
             <div class="text-center mt-20">
                <h3 class="mb-4">Beratung & Begleitung</h3>
@@ -113,17 +98,18 @@ export default class HomeComponent extends KWM_Component {
                   text="Kontakt aufnehmen" 
                   href="#" 
                   target="_blank">
-              </button-component>
+               </button-component>
             </div>
+            
+          <linkedin-component></linkedin-component>
+          <button-component 
+            text="Zu LinkedIn" 
+            href="https://www.linkedin.com/company/bildungszentrum-lenzing/" 
+            target="_blank">
+          </button-component>
 
-            <linkedin-component></linkedin-component>
-            <button-component 
-              text="Zu LinkedIn" 
-              href="https://www.linkedin.com/company/bildungszentrum-lenzing/" 
-              target="_blank">
-            </button-component>
-    
-            </section>
+        </section>
+              
         `;
   }
 }
