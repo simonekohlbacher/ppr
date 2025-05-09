@@ -5,6 +5,10 @@ import KWM_Component from "../../core/kwm-component.js";
 export default class TestimonialComponent extends KWM_Component {
     constructor() {
         super();
+        this.img = "../../img/Bernhard-Lintner.png";
+        this.zitat = "Lebenslanges Lernen ist wichtiger denn je, um mit den sich rasch ändernden Umständen gut mithalten zu können. \n                                Mit dem BZL haben wir einen Partner an der Seite, der ein umfangreiches Weiterbildungsangebot für Jobneulinge \n                                über Mitarbeitende aller Unternehmensbereiche bis hin zum Top Management bietet. \n                                Ich schätze dabei besonders die auf unsere Bedürfnisse ausgerichteten, maßgeschneiderten Lösungen.";
+        this.person = "Bernhard Lintner, VP Global QESH";
+        this.position = "Site Director Lenzing, Lenzing AG7";
     }
 
     template() {
@@ -25,13 +29,13 @@ export default class TestimonialComponent extends KWM_Component {
             <div class="relative ">
                 <div class="flex flex-col lg:flex-row items-center md:items-center justify-between gap-8 relative">
                 
-                    <!-- Kreis + Bild + Logo -->
+                    <!-- Kreis & Bild & Logo -->
                     <div class="flex flex-row justify-between items-center  md:flex-col md:items-start md:basis-1/3 space-y-0 md:space-y-6 relative z-10 pt-10 pl-[18rem] sm:pl-[6rem]" >
                         <div class="relative aspect-square w-32 sm:w-48 md:w-60 lg:w-80 bg-[var(--primary-yellow)] rounded-full flex items-center justify-center overflow-hidden shadow-lg shrink-0">
-                            <img src="../../img/Bernhard-Lintner.png" alt="Portrait Bernhard Lintner" class="w-24 md:w-32 object-cover">
+                            <img src="${this.getAttribute("img") ?? this.img}" alt="Portrait Bernhard Lintner" class="w-24 md:w-32 object-cover">
                         </div>
-                        <div class="flex justify-end md:justify-start pr-[18rem] sm:pr-[6rem] shrink-0">
-                            <img src="../../img/lenzing-logo.png" alt="Lenzing Logo" class="lg:w-30 md:w-32">
+                        <div class="flex justify-end md:justify-start pr-[18rem] sm:pr-[6rem]">
+                            <img src="../../img/lenzing-logo.png" alt="Lenzing Logo" class="lg:w-30 md:w-32 sm-20">
                         </div>
                     </div>
     
@@ -43,17 +47,13 @@ export default class TestimonialComponent extends KWM_Component {
                             <p class="text-sm md:text-[20px] leading-relaxed mb-6 text-center">
                                 
                                 <span class="text-[var(--primary-yellow)] text-5xl md:text-8xl font-bold mb-0 leading-none mb-2">“</span>
-                                Lebenslanges Lernen ist wichtiger denn je, um mit den sich rasch ändernden Umständen gut mithalten zu können. 
-                                Mit dem BZL haben wir einen Partner an der Seite, der ein umfangreiches Weiterbildungsangebot für Jobneulinge 
-                                über Mitarbeitende aller Unternehmensbereiche bis hin zum Top Management bietet. 
-                                Ich schätze dabei besonders die auf unsere Bedürfnisse ausgerichteten, maßgeschneiderten Lösungen.
+                                ${this.zitat}
                                 
                             </p>
                             <span class="text-[var(--primary-yellow)] text-5xl md:text-8xl font-bold self-end">”</span>
-                            <!-- Unterschrift -->
+                            <!-- Person & Position -->
                             <div class="font-bold lg:text-center text-sm md:text-[20px] md:text-left">
-                                Bernhard Lintner, VP Global QESH<br>
-                                Site Director Lenzing, Lenzing AG7
+                                ${this.getAttribute("person") ?? this.person}<br>${this.getAttribute("position") ?? this.position}
                             </div>
                             
                         </div>

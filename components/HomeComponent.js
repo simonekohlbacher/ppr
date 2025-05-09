@@ -38,6 +38,15 @@ export default class HomeComponent extends KWM_Component {
     ];
     new KarrierechancenComponent();
 
+    this.testimonials = [
+      {
+        img: "../../img/Bernhard-Lintner.png",
+        zitat: "Lebenslanges Lernen ist wichtiger denn je, um mit den sich rasch ändernden Umständen gut mithalten zu können.\nMit dem BZL haben wir einen Partner an der Seite, der ein umfangreiches Weiterbildungsangebot für Jobneulinge \nüber Mitarbeitende aller Unternehmensbereiche bis hin zum Top Management bietet. \nIch schätze dabei besonders die auf unsere Bedürfnisse ausgerichteten, maßgeschneiderten Lösungen.",
+        person: "Bernhard Lintner, VP Global QESH,",
+        position: "Site Director Lenzing, Lenzing AG7",
+      },
+    ];
+
   }
 
   template() {
