@@ -1,8 +1,15 @@
 {
-  "hash": "6d191456",
+  "hash": "68c9c848",
   "configHash": "a4369d87",
-  "lockfileHash": "e3b0c442",
-  "browserHash": "4ebba612",
-  "optimized": {},
+  "lockfileHash": "b41a6da0",
+  "browserHash": "bddc5e40",
+  "optimized": {
+    "swiper": {
+      "src": "../../node_modules/swiper/swiper.mjs",
+      "file": "swiper.js",
+      "fileHash": "4f2860e8",
+      "needsInterop": false
+    }
+  },
   "chunks": {}
 }

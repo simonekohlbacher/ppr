@@ -12,6 +12,7 @@ import DatenschutzComponent from "./components/DatenschutzComponent.js";
 import AGBComponent from "./components/AGBComponent.js";
 import HeroTeaserComponent from "./components/designComponents/HeroTeaserComponent.js";
 import TestimonialComponent from "./components/designComponents/TestimonialComponent.js";
+import TestimonialSliderComponent from "./components/designComponents/TestimonialSliderComponent.js";
 
 
 import KWM_Route from "./core/kwm-route.js";

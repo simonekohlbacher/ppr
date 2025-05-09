@@ -1,0 +1,63 @@
+import KWM_Component from "../../core/kwm-component.js";
+import 'swiper/swiper-bundle.css'; // falls du Swiper lokal installiert hast
+import Swiper from 'swiper';
+
+export default class TestimonialSliderComponent extends KWM_Component {
+    constructor() {
+        super();
+        this.testimonials = [
+            {
+                img: "../../img/Bernhard-Lintner.png",
+                zitat: "Lebenslanges Lernen ist wichtiger denn je, um mit den sich rasch ändernden Umständen gut mithalten zu können.\\nMit dem BZL haben wir einen Partner an der Seite, der ein umfangreiches Weiterbildungsangebot für Jobneulinge \\n über Mitarbeitende aller Unternehmensbereiche bis hin zum Top Management bietet.\\n Ich schätze dabei besonders die auf unsere Bedürfnisse ausgerichteten, maßgeschneiderten Lösungen.",
+                person: "Bernhard Lintner",
+                position: "Site Director Lenzing, Lenzing AG"
+            },
+            {
+                img: "../../img/Bernhard-Lintner.png",
+                zitat: "Ein weiteres inspirierendes Zitat...",
+                person: "Mitarbeiterin XY",
+                position: "Head of Learning"
+            }
+            // Weitere Testimonials hier
+        ];
+    }
+
+    template() {
+        return /*html*/`
+            <section class="testimonial-slider py-10 px-4 relative">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        ${this.testimonials.map(t => `
+                            <div class="swiper-slide">
+                                <testimonial-component 
+                                    img="${t.img}" 
+                                    zitat="${t.zitat}" 
+                                    person="${t.person}" 
+                                    position="${t.position}">
+                                </testimonial-component>
+                            </div>
+                        `).join('')}
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="swiper-button-prev text-3xl"></div>
+                    <div class="swiper-button-next text-3xl"></div>
+                </div>
+            </section>
+        `;
+    }
+
+    onRender() {
+        new Swiper('.swiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            }
+        });
+    }
+}
+
+customElements.define("testimonial-slider-component", TestimonialSliderComponent);

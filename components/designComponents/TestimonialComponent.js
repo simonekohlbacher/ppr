@@ -34,7 +34,7 @@ export default class TestimonialComponent extends KWM_Component {
                         <div class="relative aspect-square w-32 sm:w-48 md:w-60 lg:w-80 bg-[var(--primary-yellow)] rounded-full flex items-center justify-center overflow-hidden shadow-lg shrink-0">
                             <img src="${this.getAttribute("img") ?? this.img}" alt="Portrait Bernhard Lintner" class="w-24 md:w-32 object-cover">
                         </div>
-                        <div class="flex justify-end md:justify-start pr-[18rem] sm:pr-[6rem]">
+                        <div class="flex justify-end md:justify-start lg:pr-[18rem] md:pr-[6rem]">
                             <img src="../../img/lenzing-logo.png" alt="Lenzing Logo" class="lg:w-30 md:w-32 sm-20">
                         </div>
                     </div>
