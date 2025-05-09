@@ -45,16 +45,7 @@ p {
   }
 }
 
-/* abgerundete Ecken beim Testimonial */
-.rounded-edge {
-  width: 100%;
-  height: auto;
-  min-height: 200px; /* oder wie hoch du es willst */
-  background: #f0f0f0; /* dein hellgrau */
 
-  /* Nur bei großen Bildschirmen: runde Ecke */
-  clip-path: ellipse(100% 85% at 100% 50%);
-}
 
 @media (max-width: 768px) {
   .rounded-edge {

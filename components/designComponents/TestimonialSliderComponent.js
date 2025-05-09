@@ -40,8 +40,8 @@ export default class TestimonialSliderComponent extends KWM_Component {
                     </div>
 
                     <!-- Navigation Buttons -->
-                    <div class="swiper-button-prev text-3xl"></div>
-                    <div class="swiper-button-next text-3xl"></div>
+                    <div class="swiper-button-prev text-3xl" style="color: var(--bzl-black);"></div>
+                    <div class="swiper-button-next text-3xl" style="color: var(--bzl-black);"></div>
                 </div>
             </section>
         `;
