@@ -1,10 +1,16 @@
 import KWM_Component from "../../core/kwm-component.js";
-import Swiper from 'swiper';
+
 
 export default class TestimonialSliderComponent extends KWM_Component {
     constructor() {
         super();
         this.testimonials = [
+            {
+                img: "../../img/Bernhard-Lintner.png",
+                zitat: "Lebenslanges Lernen ist wichtiger denn je, um mit den sich rasch ändernden Umständen gut mithalten zu können. Mit dem BZL haben wir einen Partner an der Seite, der ein umfangreiches Weiterbildungsangebot für Jobneulinge über Mitarbeitende aller Unternehmensbereiche bis hin zum Top Management bietet. Ich schätze dabei besonders die auf unsere Bedürfnisse ausgerichteten, maßgeschneiderten Lösungen.",
+                person: "Bernhard Lintner",
+                position: "Site Director Lenzing, Lenzing AG"
+            },
             {
                 img: "../../img/Bernhard-Lintner.png",
                 zitat: "Lebenslanges Lernen ist wichtiger denn je, um mit den sich rasch ändernden Umständen gut mithalten zu können. Mit dem BZL haben wir einen Partner an der Seite, der ein umfangreiches Weiterbildungsangebot für Jobneulinge über Mitarbeitende aller Unternehmensbereiche bis hin zum Top Management bietet. Ich schätze dabei besonders die auf unsere Bedürfnisse ausgerichteten, maßgeschneiderten Lösungen.",
