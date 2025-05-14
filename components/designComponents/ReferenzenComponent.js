@@ -19,7 +19,7 @@ export default class ReferenzenComponent extends KWM_Component {
       <section class="py-20 bg-white overflow-hidden">
         <div class="max-w-7xl mx-auto px-4">
           
-          <h2 class="mb-12 text-3xl font-bold text-center">Referenzen</h2>
+            <h2>Referenzen</h2>
 
           <div class="relative marquee-wrapper overflow-hidden">
             <div class="flex animate-marquee whitespace-nowrap">
