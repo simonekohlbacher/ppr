@@ -81,7 +81,7 @@ export default class HomeComponent extends KWM_Component {
                 </div>
               </div>
               <div class="flex flex-col md:items-end mt-20">
-                <h4 class="text-2xl font-semibold mb-4 md:px-22 px-12 justify-end">Fachausbildung</h4> 
+                <h3 class="text-2xl font-semibold mb-4 justify-end contentDiv">Fachausbildung</h3> 
                 <div class="md:w-152 w-92 h-3 bg-[var(--bzl-yellow)]"></div>
                 <div class="md:mr-24 mt-10">
                   <card-slider-component courseCards="${courseCardsJson}"></card-slider-component>
