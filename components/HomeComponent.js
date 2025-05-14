@@ -57,33 +57,16 @@ export default class HomeComponent extends KWM_Component {
                 bg-image="../../img/headerImages/HomeHeaderBild.jpg"
             ></hero-teaser-component>
        
-          <div class="flex gap-32 justify-center">  
-              <card-slider-component courseCards="${courseCardsJson}"></card-slider-component>
-              <card-slider-component courseCards="${courseCardsJson}"></card-slider-component>
-          </div>   
-          <button-component text="Weitere Kurse entdecken"></button-component>
-          
-          <karrierechancen-component></karrierechancen-component>
-          
-          <div class="text-center mt-20">
-             <h3 class="mb-4">Beratung & Begleitung</h3>
-             <h4 class="max-w-[400px] mx-auto text-center leading-relaxed">Vom Konzept über die Umsetzung, Organisation und Durchführung bis zum Transfer</h4>
-             <button-component 
-                text="Kontakt aufnehmen" 
-                href="#" 
-                target="_blank">
-             </button-component>
-          </div>
-             <div class="flex md:flex-row gap-72 justify-center pt-52">
-              <div class="basis-2/3 pl-52">
-                <cta-component 
+            <div class="flex flex-col md:flex-row gap-8 md:gap-20 justify-center px-4 py-20 md:py-52">
+              <div class="w-full md:w-2/3">
+                <cta-component
                   heading="Bildungszentrum Lenzing"
-                  text="Ob Ausbildung, Impulsseminar, Fachkurs, Lehrlingsausbildung oder maßgeschneiderte Personal- und Organisationsentwicklung - wir begleiten Menschen und Unternehmen in ganz Österreich auf ihrem Weg zu nachhaltigem Erfolg. Mit Know-How aus der Praxis, Handschlagqualität und einem Fokus die Menschen und ihre individuellen Bedürfnisse."
+                  text="Ob Ausbildung, Impulsseminar, Fachkurs, Lehrlingsausbildung oder maßgeschneiderte Personal- und Organisationsentwicklung..."
                   buttonText="Leistungen entdecken">
                 </cta-component>
               </div>
-              <div class="basis-1/3">
-                <card-component 
+              <div class="w-full md:w-1/3">
+                <card-component
                   img="../../img/kursprogramm.png"
                   imgAlt="Kursprogramm"
                   heading="Kursprogramm 2024/25">
@@ -105,7 +88,7 @@ export default class HomeComponent extends KWM_Component {
                   <card-slider-component courseCards="${courseCardsJson}"></card-slider-component>
                 </div>
               </div>
-            </div>
+            </div>         
             <button-component text="Weitere Kurse entdecken"></button-component>
             
             <karrierechancen-component></karrierechancen-component>
