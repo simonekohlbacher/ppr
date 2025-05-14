@@ -41,3 +41,17 @@ h3 {
     width: calc(100% - 6rem);
   }
 }
+
+
+.zitatfeld {
+  @media (width < 640px) {
+    padding: 2rem 4rem 2rem 4rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .rounded-edge {
+    clip-path: none; /* keine Rundung mehr */
+  }
+}

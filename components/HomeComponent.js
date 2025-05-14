@@ -25,7 +25,7 @@ export default class HomeComponent extends KWM_Component {
       },
       {
         img: "img/Seminar.jpg",
-        imgAlt: "Seminar",
+        imgAlt: "Workshop",
         heading: "Ausbildung der Ausbilder:innen (AdA) Lehrlingsausbilder:in-Basislehrgang",
         date: "5. Mai 2025",
         time: "10:00 - 16:00 Uhr",
@@ -33,13 +33,14 @@ export default class HomeComponent extends KWM_Component {
       },
       {
         img: "img/Seminar.jpg",
-        imgAlt: "Seminar",
+        imgAlt: "Event",
         heading: "Ausbildung der Ausbilder:innen (AdA) Lehrlingsausbilder:in-Basislehrgang",
         date: "20. Juni 2025",
         time: "18:00 - 22:00 Uhr",
         place: "Haus der Industrie Wien"
       }
     ];
+    new KarrierechancenComponent();
 
   }
 
@@ -50,46 +51,21 @@ export default class HomeComponent extends KWM_Component {
     return /*html*/ `
         <section id="main_content">
             <hero-teaser-component
-                headline="Einloggen"
+                headline="Einloggen";
                 sub-headline="und Kurse entdecken!"
                 text="Erstellen Sie jetzt Ihr Konto oder melden Sie sich an, um auf alle verfügbaren Weiterbildungsangebote zugreifen zu können"
-                bg-image="../../img/headerImages/HomeHeaderBild.jpg"> 
-            </hero-teaser-component>
+                bg-image="../../img/headerImages/HomeHeaderBild.jpg"
+            ></hero-teaser-component>
        
-             <div class="flex md:flex-row gap-72 justify-center pt-52">
-              <div class="basis-2/3 pl-52">
-                <cta-component 
-                  heading="Bildungszentrum Lenzing"
-                  text="Ob Ausbildung, Impulsseminar, Fachkurs, Lehrlingsausbildung oder maßgeschneiderte Personal- und Organisationsentwicklung - wir begleiten Menschen und Unternehmen in ganz Österreich auf ihrem Weg zu nachhaltigem Erfolg. Mit Know-How aus der Praxis, Handschlagqualität und einem Fokus die Menschen und ihre individuellen Bedürfnisse."
-                  buttonText="Leistungen entdecken">
-                </cta-component>
-              </div>
-              <div class="basis-1/3">
-                <card-component 
-                  img="../../img/kursprogramm.png"
-                  imgAlt="Kursprogramm"
-                  heading="Kursprogramm 2024/25">
-                </card-component>
-              </div>
-            </div>
+        <div class="flex gap-32 justify-center">  
+            <card-slider-component courseCards="${courseCardsJson}"></card-slider-component>
+            <card-slider-component courseCards="${courseCardsJson}"></card-slider-component>
+        </div>   
+        <button-component text="Weitere Kurse entdecken"></button-component>
             
-            <div class="flex flex-col md:flex-row justify-between w-full">
-              <div>
-                <heading-component headline="Aktuelle Kurse" subHeadline="Personalentwicklung"></heading-component>
-                <div class="md:ml-24">
-                  <card-slider-component courseCards="${courseCardsJson}"></card-slider-component>
-                </div>
-              </div>
-              <div class="flex flex-col md:items-end mt-20">
-                <h4 class="text-2xl font-semibold mb-4 md:px-22 px-12 justify-end">Fachausbildung</h4> 
-                <div class="md:w-152 w-92 h-3 bg-[var(--bzl-yellow)]"></div>
-                <div class="md:mr-24 mt-10">
-                  <card-slider-component courseCards="${courseCardsJson}"></card-slider-component>
-                </div>
-              </div>
-            </div>
-            <button-component text="Weitere Kurse entdecken"></button-component>
-            
+                         
+          
+       
             <karrierechancen-component></karrierechancen-component>
             <div class="text-center mt-20">
                <h3 class="mb-4">Beratung & Begleitung</h3>
@@ -101,6 +77,8 @@ export default class HomeComponent extends KWM_Component {
                </button-component>
             </div>
             
+        <testimonial-slider-component></testimonial-slider-component>   
+            
           <linkedin-component></linkedin-component>
           <button-component 
             text="Zu LinkedIn" 
@@ -109,7 +87,6 @@ export default class HomeComponent extends KWM_Component {
           </button-component>
 
         </section>
-              
         `;
   }
 }
