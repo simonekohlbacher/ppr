@@ -51,7 +51,7 @@ export default class HomeComponent extends KWM_Component {
     return /*html*/ `
         <section id="main_content">
             <hero-teaser-component
-                headline="Einloggen";
+                headline="Einloggen"
                 sub-headline="und Kurse entdecken!"
                 text="Erstellen Sie jetzt Ihr Konto oder melden Sie sich an, um auf alle verfügbaren Weiterbildungsangebote zugreifen zu können"
                 bg-image="../../img/headerImages/HomeHeaderBild.jpg"
@@ -74,6 +74,50 @@ export default class HomeComponent extends KWM_Component {
                 target="_blank">
              </button-component>
           </div>
+             <div class="flex md:flex-row gap-72 justify-center pt-52">
+              <div class="basis-2/3 pl-52">
+                <cta-component 
+                  heading="Bildungszentrum Lenzing"
+                  text="Ob Ausbildung, Impulsseminar, Fachkurs, Lehrlingsausbildung oder maßgeschneiderte Personal- und Organisationsentwicklung - wir begleiten Menschen und Unternehmen in ganz Österreich auf ihrem Weg zu nachhaltigem Erfolg. Mit Know-How aus der Praxis, Handschlagqualität und einem Fokus die Menschen und ihre individuellen Bedürfnisse."
+                  buttonText="Leistungen entdecken">
+                </cta-component>
+              </div>
+              <div class="basis-1/3">
+                <card-component 
+                  img="../../img/kursprogramm.png"
+                  imgAlt="Kursprogramm"
+                  heading="Kursprogramm 2024/25">
+                </card-component>
+              </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-between w-full">
+              <div>
+                <heading-component headline="Aktuelle Kurse" subHeadline="Personalentwicklung"></heading-component>
+                <div class="md:ml-24">
+                  <card-slider-component courseCards="${courseCardsJson}"></card-slider-component>
+                </div>
+              </div>
+              <div class="flex flex-col md:items-end mt-20">
+                <h3 class="text-2xl font-semibold mb-4 justify-end contentDiv">Fachausbildung</h3> 
+                <div class="md:w-152 w-92 h-3 bg-[var(--bzl-yellow)]"></div>
+                <div class="md:mr-24 mt-10">
+                  <card-slider-component courseCards="${courseCardsJson}"></card-slider-component>
+                </div>
+              </div>
+            </div>
+            <button-component text="Weitere Kurse entdecken"></button-component>
+            
+            <karrierechancen-component></karrierechancen-component>
+            <div class="text-center mt-20">
+               <h3 class="mb-4">Beratung & Begleitung</h3>
+               <h4 class="max-w-[400px] mx-auto text-center leading-relaxed">Vom Konzept über die Umsetzung, Organisation und Durchführung bis zum Transfer</h4>
+               <button-component 
+                  text="Kontakt aufnehmen" 
+                  href="#" 
+                  target="_blank">
+               </button-component>
+            </div>
             
         <testimonial-slider-component></testimonial-slider-component>   
             
@@ -85,6 +129,7 @@ export default class HomeComponent extends KWM_Component {
           </button-component>
 
         </section>
+              
         `;
   }
 }
