@@ -8,7 +8,7 @@ export default class TestimonialSliderComponent extends KWM_Component {
         this.testimonials = [
             {
                 img: "../../img/Bernhard-Lintner.png",
-                zitat: "Lebenslanges Lernen ist wichtiger denn je, um mit den sich rasch ändernden Umständen gut mithalten zu können.\\nMit dem BZL haben wir einen Partner an der Seite, der ein umfangreiches Weiterbildungsangebot für Jobneulinge \\n über Mitarbeitende aller Unternehmensbereiche bis hin zum Top Management bietet.\\n Ich schätze dabei besonders die auf unsere Bedürfnisse ausgerichteten, maßgeschneiderten Lösungen.",
+                zitat: "Lebenslanges Lernen ist wichtiger denn je, um mit den sich rasch ändernden Umständen gut mithalten zu können. Mit dem BZL haben wir einen Partner an der Seite, der ein umfangreiches Weiterbildungsangebot für Jobneulinge über Mitarbeitende aller Unternehmensbereiche bis hin zum Top Management bietet. Ich schätze dabei besonders die auf unsere Bedürfnisse ausgerichteten, maßgeschneiderten Lösungen.",
                 person: "Bernhard Lintner",
                 position: "Site Director Lenzing, Lenzing AG"
             },

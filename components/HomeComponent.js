@@ -70,9 +70,8 @@ export default class HomeComponent extends KWM_Component {
             
           <karrierechancen-component></karrierechancen-component>
                 
-          <testimonial-slider-component></testimonial-slider-component>      
-          <testimonial-component></testimonial-component>
-          
+          <testimonial-slider-component></testimonial-slider-component>   
+       
         </section>
         `;
   }

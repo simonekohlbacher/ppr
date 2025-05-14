@@ -45,6 +45,11 @@ p {
   }
 }
 
+.zitatfeld {
+  @media (width < 640px) {
+    padding: 2rem 4rem 2rem 4rem;
+  }
+}
 
 
 @media (max-width: 768px) {
