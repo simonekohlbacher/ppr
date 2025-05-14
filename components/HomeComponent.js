@@ -57,25 +57,23 @@ export default class HomeComponent extends KWM_Component {
                 bg-image="../../img/headerImages/HomeHeaderBild.jpg"
             ></hero-teaser-component>
        
-        <div class="flex gap-32 justify-center">  
-            <card-slider-component courseCards="${courseCardsJson}"></card-slider-component>
-            <card-slider-component courseCards="${courseCardsJson}"></card-slider-component>
-        </div>   
-        <button-component text="Weitere Kurse entdecken"></button-component>
-            
-                         
+          <div class="flex gap-32 justify-center">  
+              <card-slider-component courseCards="${courseCardsJson}"></card-slider-component>
+              <card-slider-component courseCards="${courseCardsJson}"></card-slider-component>
+          </div>   
+          <button-component text="Weitere Kurse entdecken"></button-component>
           
-       
-            <karrierechancen-component></karrierechancen-component>
-            <div class="text-center mt-20">
-               <h3 class="mb-4">Beratung & Begleitung</h3>
-               <h4 class="max-w-[400px] mx-auto text-center leading-relaxed">Vom Konzept über die Umsetzung, Organisation und Durchführung bis zum Transfer</h4>
-               <button-component 
-                  text="Kontakt aufnehmen" 
-                  href="#" 
-                  target="_blank">
-               </button-component>
-            </div>
+          <karrierechancen-component></karrierechancen-component>
+          
+          <div class="text-center mt-20">
+             <h3 class="mb-4">Beratung & Begleitung</h3>
+             <h4 class="max-w-[400px] mx-auto text-center leading-relaxed">Vom Konzept über die Umsetzung, Organisation und Durchführung bis zum Transfer</h4>
+             <button-component 
+                text="Kontakt aufnehmen" 
+                href="#" 
+                target="_blank">
+             </button-component>
+          </div>
             
         <testimonial-slider-component></testimonial-slider-component>   
             
