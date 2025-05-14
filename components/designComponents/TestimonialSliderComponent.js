@@ -1,5 +1,6 @@
 import KWM_Component from "../../core/kwm-component.js";
 
+
 export default class TestimonialSliderComponent extends KWM_Component {
     constructor() {
         super();

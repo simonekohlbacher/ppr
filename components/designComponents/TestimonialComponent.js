@@ -17,11 +17,11 @@ export default class TestimonialComponent extends KWM_Component {
             
             <div class="hidden lg:block absolute top-0 bottom-0 right-0 z-0 pointer-events-none" style="width: 80%;">
                 <svg viewBox="0 0 1506 600" xmlns="http://www.w3.org/2000/svg" class="h-full">
-                  <path d="M165.495 600H1149V0H165.495C-137.841 273.472 45.8979 526.672 165.495 600Z" fill="#E8E8E8"/>
-                  <rect x="1147" width="359" height="100%" fill="#E8E8E8"/>
+                    <path d="M165.495 600H1149V0H165.495C-137.841 273.472 45.8979 526.672 165.495 600Z" fill="#E8E8E8"/>
+                    <!-- Rechteck auf die gesamte Breite des Viewports setzen -->
+                    <rect x="1147" width="100vw" height="100%" fill="#E8E8E8"/>
                 </svg>
             </div>
-            
             <div class="relative ">
                 <div class="flex flex-col lg:flex-row items-center md:items-center justify-between gap-8 relative">
                 
