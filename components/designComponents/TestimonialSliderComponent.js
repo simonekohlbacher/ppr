@@ -1,5 +1,4 @@
 import KWM_Component from "../../core/kwm-component.js";
-import 'swiper/swiper-bundle.css'; // falls du Swiper lokal installiert hast
 import Swiper from 'swiper';
 
 export default class TestimonialSliderComponent extends KWM_Component {
@@ -12,12 +11,6 @@ export default class TestimonialSliderComponent extends KWM_Component {
                 person: "Bernhard Lintner",
                 position: "Site Director Lenzing, Lenzing AG"
             },
-            {
-                img: "../../img/Bernhard-Lintner.png",
-                zitat: "Ein weiteres inspirierendes Zitat...",
-                person: "Mitarbeiterin XY",
-                position: "Head of Learning"
-            }
             // Weitere Testimonials hier
         ];
     }
