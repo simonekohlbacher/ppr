@@ -13,6 +13,7 @@ import AGBComponent from "./components/AGBComponent.js";
 import KarrierechancenComponent from "./components/designComponents/KarrierechancenComponent.js";
 import ReferenzenComponent from "./components/designComponents/ReferenzenComponent.js";
 import HeroTeaserComponent from "./components/designComponents/HeroTeaserComponent.js";
+import LinkedInComponent from "./components/designComponents/LinkedInComponent";
 
 import KWM_Route from "./core/kwm-route.js";
 import KWM_Router from "./core/kwm-router.js";
